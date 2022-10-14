@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./landingPage.css";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+  const handleAbout = () => {
+    navigate("/about");
+  };
+
   return (
     <div className="landingPage">
       <h1 className="recipes">Recipes</h1>
@@ -13,7 +20,7 @@ const LandingPage = () => {
         Discover the joy of cooking (and making fancy drinks) right in your
         kitchen!
       </p>
-      <button className="landing_btn">Click here to know more...</button>
+      <button className="landing_btn" onClick={handleAbout}>Click here to know more...</button>
     </div>
   );
 };
