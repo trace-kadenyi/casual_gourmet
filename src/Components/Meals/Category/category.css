@@ -1,0 +1,18 @@
+.individual_category {
+  padding-left: 20px;
+}
+
+.recipe_image {
+  width: 200px;
+  cursor: pointer;
+}
+
+.individual_items {
+  margin-bottom: 50px;
+  border: 2px black solid;
+  padding: 10px;
+}
+
+.meal_title {
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { FaLongArrowAltRight } from 'react-icons/fa';
+import { FaLongArrowAltRight } from "react-icons/fa";
 import "./categories.css";
 import { fetchCategories } from "../../../Redux/Meals/categoriesslice";
 import { useNavigate, NavLink } from "react-router-dom";
@@ -37,7 +37,9 @@ const Categories = () => {
       >
         Trial
       </button>
-      <h1 style={{ textDecoration: "underline", color: "red" }}>Meals Categories</h1>
+      <h1 style={{ textDecoration: "underline", color: "red" }}>
+        Meals Categories
+      </h1>
       {loading ? (
         <h1>Loading...</h1>
       ) : (
@@ -49,7 +51,12 @@ const Categories = () => {
               alt={category.strCategory}
               className="categoriesImg"
             />
-            <NavLink className="arrow" to={`/meals_categories/${category.strCategory}`}><FaLongArrowAltRight /></NavLink>
+            <NavLink
+              className="arrow"
+              to={`/meals_categories/${category.strCategory}`}
+            >
+              <FaLongArrowAltRight />
+            </NavLink>
           </div>
         ))
       )}
