@@ -11,7 +11,7 @@ const About = () => {
   };
 
   const handleMeals = () => {
-    navigate("/meals");
+    navigate("/meals_categories");
   };
 
   const handleDrinks = () => {

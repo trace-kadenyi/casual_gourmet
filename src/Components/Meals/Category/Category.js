@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, NavLink, useParams } from "react-router-dom";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import axios from "axios";
 
-const IndividualCategory = () => {
+import "./category.css";
+
+const Category = () => {
   const [fetchedCategory, setFetchedCategory] = useState([]);
   const { categories, loading } = useSelector((state) => state.mealsCategories);
 
@@ -38,20 +39,23 @@ const IndividualCategory = () => {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <h1>{foundCategory.strCategory}</h1>
-          <img
+          <h1>{foundCategory.strCategory} Recipes</h1>
+          {/* <img
             src={foundCategory.strCategoryThumb}
             alt={foundCategory.strCategory}
             className="categoriesImg"
-          />
+          /> */}
           <div>
-            <h3>Recipes</h3>
             <div>
               {fetchedCategory.status === 200 ? (
                 fetchedCategory.data.meals.map((meal, index) => (
                   <div key={index}>
                     <h4>{meal.strMeal}</h4>
-                    <img src={meal.strMealThumb} alt={meal.strMeal} />
+                    <img
+                      className="recipe_image"
+                      src={meal.strMealThumb}
+                      alt={meal.strMeal}
+                    />
                   </div>
                 ))
               ) : (
@@ -65,4 +69,4 @@ const IndividualCategory = () => {
   );
 };
 
-export default IndividualCategory;
+export default Category;

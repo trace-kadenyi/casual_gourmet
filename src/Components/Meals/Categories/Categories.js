@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { FaLongArrowAltRight } from 'react-icons/fa';
-import "./meals.css";
-import { fetchCategories } from "../../Redux/Meals/categoriesslice";
+import "./categories.css";
+import { fetchCategories } from "../../../Redux/Meals/categoriesslice";
 import { useNavigate, NavLink } from "react-router-dom";
 
-const Meals = () => {
+const Categories = () => {
   const { categories, loading } = useSelector((state) => state.mealsCategories);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ const Meals = () => {
       >
         Trial
       </button>
-      <h1 style={{ textDecoration: "underline", color: "red" }}>Meals</h1>
+      <h1 style={{ textDecoration: "underline", color: "red" }}>Meals Categories</h1>
       {loading ? (
         <h1>Loading...</h1>
       ) : (
@@ -49,7 +49,7 @@ const Meals = () => {
               alt={category.strCategory}
               className="categoriesImg"
             />
-            <NavLink className="arrow" to={`/meals/${category.strCategory}`}><FaLongArrowAltRight /></NavLink>
+            <NavLink className="arrow" to={`/meals_categories/${category.strCategory}`}><FaLongArrowAltRight /></NavLink>
           </div>
         ))
       )}
@@ -66,4 +66,4 @@ const Meals = () => {
   );
 };
 
-export default Meals;
+export default Categories;
