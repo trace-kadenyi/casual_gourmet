@@ -32,6 +32,26 @@ const MealDetails = () => {
     fetchMealDetails();
   }, []);
 
+  // fetch ingredients and measures from API
+
+  let ingredients = [];
+
+  const handleIngredients = () => {
+    if (fetchedMealDetails.data) {
+      for (let i = 1; i <= 20; i++) {
+        if (fetchedMealDetails.data.meals[0][`strIngredient${i}`]) {
+          ingredients.push(
+            `${fetchedMealDetails.data.meals[0][`strIngredient${i}`]} - ${
+              fetchedMealDetails.data.meals[0][`strMeasure${i}`]
+            }`
+          );
+        }
+      }
+      return ingredients;
+    }
+  };
+
+  handleIngredients();
   return (
     <div className="individual_meal">
       {loading ? (
@@ -53,6 +73,12 @@ const MealDetails = () => {
                       <h1>{meal.strMeal}</h1>
                       <h5>{meal.strArea}</h5>
                       <p>{meal.strInstructions}</p>
+                      <h3>Ingredients</h3>
+                      <ul>
+                        {ingredients.map((ingredient, index) => (
+                          <li key={index}>{ingredient}</li>
+                        ))}
+                      </ul>
                     </div>
                   ))
                 : null}
