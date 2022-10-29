@@ -1,3 +1,13 @@
 .trial {
   background: linear-gradient(90deg, #C73866 0%, #FE676E 100%);
 }
+
+.todo {
+    background: linear-gradient(90deg, #C73866 0%, #FE676E 100%);
+
+}
+.todo span {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

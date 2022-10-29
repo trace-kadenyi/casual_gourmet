@@ -28,7 +28,7 @@ const Categories = () => {
       <button
         className="trial"
         style={{
-          padding: "60px",
+          padding: "20px",
           width: "550px",
           display: "flex",
           margin: "auto",
@@ -37,6 +37,17 @@ const Categories = () => {
       >
         Trial
       </button>
+      <div className="todo">
+        <h3>TODO</h3>
+        <p>
+          1. Search by:
+          <span>a. Ingredients</span>
+          <span>b. Country of Origin</span>
+          <span>c. First letter</span>
+          <span>d. Main ingredient</span>
+        </p>
+        <p>2. List all areas</p>
+      </div>
       <h1 style={{ textDecoration: "underline", color: "red" }}>
         Meals Categories
       </h1>
