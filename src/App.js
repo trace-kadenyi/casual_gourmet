@@ -7,6 +7,8 @@ import About from "./Pages/AboutPage/About";
 import Category from "./Components/Meals/Category/Category";
 import Categories from "./Components/Meals/Categories/Categories";
 import MealDetails from "./Components/Meals/MealDetails/MealDetails";
+import Areas from "./Components/Meals/Areas/Areas";
+import MealsPerArea from "./Components/Meals/Areas/MealsPerArea";
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
           path="/meals_categories/:category/:id"
           element={<MealDetails />}
         />
+        <Route path="/areas" element={<Areas />} />
+        <Route path="/:area" element={<MealsPerArea />} />
       </Routes>
     </Router>
   );
