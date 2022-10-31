@@ -22,6 +22,10 @@ const Categories = () => {
     navigate("/regular");
   };
 
+  const handleAreas = () => {
+    navigate("/areas");
+  };
+
   return (
     <div>
       {/* meals section */}
@@ -48,6 +52,7 @@ const Categories = () => {
         </p>
         <p>2. List all areas</p>
       </div>
+      <button onClick={handleAreas}>Areas</button>
       <h1 style={{ textDecoration: "underline", color: "red" }}>
         Meals Categories
       </h1>
