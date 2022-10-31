@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -34,7 +34,7 @@ const MealDetails = () => {
 
   // fetch ingredients and measures from API
 
-  let ingredients = [];
+  const ingredients = [];
 
   const handleIngredients = () => {
     if (fetchedMealDetails.data) {
@@ -50,8 +50,9 @@ const MealDetails = () => {
       return ingredients;
     }
   };
-
+  // call handleIngredients function
   handleIngredients();
+
   return (
     <div className="individual_meal">
       {loading ? (
