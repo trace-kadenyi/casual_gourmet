@@ -3,6 +3,7 @@ import categoriesReducer from "./Meals/categoriesslice";
 import categoryReducer from "./Meals/individual_category_slice";
 import cocktailsReducer from "./Drinks/cocktailslice";
 import regularDrinksReducer from "./Drinks/regularDrinksSlice";
+import areasReducer from "./Meals/areaslice";
 import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
   mealsCategory: categoryReducer,
   cocktails: cocktailsReducer,
   regularDrinks: regularDrinksReducer,
+  areas: areasReducer,
   middleware: [thunk],
 });
 
