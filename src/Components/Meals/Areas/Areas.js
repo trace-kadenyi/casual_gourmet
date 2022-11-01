@@ -28,7 +28,7 @@ const Areas = () => {
               <div className="category" key={area.strArea}>
                 <h3>{area.strArea}</h3>
 
-                <NavLink className="arrow" to={`/${area.strArea}`}>
+                <NavLink className="arrow" to={`/areas/${area.strArea}`}>
                   <FaLongArrowAltRight />
                 </NavLink>
               </div>
