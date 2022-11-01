@@ -4,8 +4,9 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import "./categories.css";
 import { fetchCategories } from "../../../Redux/Meals/categoriesslice";
 import { useNavigate, NavLink } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
-const Categories = () => {
+const Categories = ({ type }) => {
   const { categories, loading } = useSelector((state) => state.mealsCategories);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -27,9 +28,10 @@ const Categories = () => {
   };
 
   return (
-    <div>
+    <div className="categories_sect">
+      <Navbar type="categories" />
       {/* meals section */}
-      <button
+      {/* <button
         className="trial"
         style={{
           padding: "20px",
@@ -40,7 +42,7 @@ const Categories = () => {
         }}
       >
         Trial
-      </button>
+      </button> */}
       <div className="todo">
         <h3>TODO</h3>
         <p>

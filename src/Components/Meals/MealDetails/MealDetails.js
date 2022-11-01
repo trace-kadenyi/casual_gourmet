@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 import "./meal_details.css";
+import Navbar from "../Navbar/Navbar";
 
 const MealDetails = () => {
   const [fetchedMealDetails, setFetchedMealDetails] = useState([]);
@@ -55,6 +56,7 @@ const MealDetails = () => {
 
   return (
     <div className="individual_meal">
+      <Navbar type="meal_details" />
       {loading ? (
         <h1>Loading...</h1>
       ) : (

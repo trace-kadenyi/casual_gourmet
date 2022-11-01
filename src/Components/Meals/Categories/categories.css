@@ -11,3 +11,7 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.categories_sect {
+  padding: 20px;
+}

@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 import "./category.css";
+import Navbar from "../Navbar/Navbar";
 
 const Category = () => {
   const [fetchedCategory, setFetchedCategory] = useState([]);
@@ -42,6 +43,7 @@ const Category = () => {
 
   return (
     <div className="individual_category">
+      <Navbar type="category" />
       {loading ? (
         <h1>Loading...</h1>
       ) : (
