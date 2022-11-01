@@ -9,6 +9,7 @@ import Categories from "./Components/Meals/Categories/Categories";
 import MealDetails from "./Components/Meals/MealDetails/MealDetails";
 import Areas from "./Components/Meals/Areas/Areas";
 import MealsPerArea from "./Components/Meals/Areas/MealsPerArea";
+import FunCorner from "./Components/Meals/FunCorner/FunCorner";
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
           element={<MealDetails />}
         />
         <Route path="/areas" element={<Areas />} />
-        <Route path="/:area" element={<MealsPerArea />} />
+        <Route path="/areas/:area" element={<MealsPerArea />} />
+        <Route path="/fun_corner" element={<FunCorner />} />
       </Routes>
     </Router>
   );
