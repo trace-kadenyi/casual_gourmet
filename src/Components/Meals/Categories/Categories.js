@@ -4,7 +4,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import "./categories.css";
 import { fetchCategories } from "../../../Redux/Meals/categoriesslice";
 import { useNavigate, NavLink } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../MealsNavigation/Navbar";
 
 const Categories = ({ type }) => {
   const { categories, loading } = useSelector((state) => state.mealsCategories);
@@ -23,9 +23,9 @@ const Categories = ({ type }) => {
     navigate("/regular");
   };
 
-  const handleAreas = () => {
-    navigate("/areas");
-  };
+  // const handleAreas = () => {
+  //   navigate("/areas");
+  // };
 
   return (
     <div className="categories_sect">
@@ -43,19 +43,21 @@ const Categories = ({ type }) => {
       >
         Trial
       </button> */}
-      <div className="todo">
+      {/* <div className="todo">
         <h3>TODO</h3>
         <p>
           1. Search by:
           <span>a. Ingredients</span>
-          <span>b. Country of Origin</span>
-          <span>c. First letter</span>
-          <span>d. Main ingredient</span>
+          <span>b. Country of Origin- www.themealdb.com/api/json/v1/1/filter.php?a=Canadian</span>
+          <span>c. First letter- www.themealdb.com/api/json/v1/1/search.php?f=a</span>
+          <span>d. Main ingredient- www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast</span>
+          <span>e. Name - www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata</span>
+          <span>f. Random - www.themealdb.com/api/json/v1/1/random.php</span>
         </p>
-        <p>2. List all areas</p>
-      </div>
-      <button onClick={handleAreas}>Areas</button>
-      <h1 style={{ textDecoration: "underline", color: "red" }}>
+        <p>3. Ingredient Details - www.themealdb.com/api/json/v1/1/list.php?i=list</p>
+      </div> */}
+      {/* <button onClick={handleAreas}>Areas</button> */}
+      <h1 className="categories_head" >
         Meals Categories
       </h1>
       {loading ? (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../MealsNavigation/Navbar";
 
 const FunCorner = () => {
   return (

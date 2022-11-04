@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 import "./meal_details.css";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../MealsNavigation/Navbar";
 
 const MealDetails = () => {
   const [fetchedMealDetails, setFetchedMealDetails] = useState([]);
