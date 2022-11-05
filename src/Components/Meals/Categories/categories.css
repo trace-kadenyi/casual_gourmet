@@ -23,7 +23,7 @@
 .category_div {
   position: relative;
   overflow: hidden;
-  height: 370px;
+  height: 400px;
 }
 
 .categoriesImg {
@@ -47,6 +47,7 @@
   align-items: center;
   font-weight: bold;
   font-style: italic;
+  text-align: center;
 }
 
 .cat_heading {
@@ -87,4 +88,13 @@
 
 .category_div:hover > .arrow {
   opacity: 1;
+}
+
+.showMore {
+  position: absolute;
+  bottom: 2px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+
 }

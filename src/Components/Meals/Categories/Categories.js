@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import  { TiArrowForwardOutline } from "react-icons/ti";
+import { TiArrowForwardOutline } from "react-icons/ti";
 import "./categories.css";
 import { fetchCategories } from "../../../Redux/Meals/categoriesslice";
 import { useNavigate, NavLink } from "react-router-dom";
 import Navbar from "../MealsNavigation/Navbar";
 
 const Categories = ({ type }) => {
+  const [showMore, setShowMore] = useState(false);
   const { categories, loading } = useSelector((state) => state.mealsCategories);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,18 +24,10 @@ const Categories = ({ type }) => {
     navigate("/regular");
   };
 
-  const handleMealDetails = (cat) => {
-    navigate(`/meals_categories/${cat}`);
+  const handleShowMore = (e) => {
+    setShowMore(!showMore);
+    e.target.innerText = showMore ? "Show More" : "Show Less";
   };
-
-  // const handleHover = (e) => {
-  //   e.target.style.display = "rgb(255, 255, 255)";
-  //   e.target.style.color = "rgb(0, 0, 0)";
-  // };
-
-  // const handleAreas = () => {
-  //   navigate("/areas");
-  // };
 
   return (
     <div className="categories_sect">
@@ -66,28 +59,35 @@ const Categories = ({ type }) => {
         <p>3. Ingredient Details - www.themealdb.com/api/json/v1/1/list.php?i=list</p>
       </div> */}
       {/* <button onClick={handleAreas}>Areas</button> */}
-      <h1 className="categories_head" >
-        Meals Categories
-      </h1>
+      <h1 className="categories_head">Meals Categories</h1>
       <div className="categories_div">
-      {loading ? (
-        <h1>Loading...</h1>
-      ) : (
-        categories.map((category) => (
-          <div key={category.idCategory} className='category_div'>
-            <h1 className="cat_heading">{category.strCategory}</h1>
-            <img
-              src={category.strCategoryThumb}
-              alt={category.strCategory}
-              className="categoriesImg"
-              // onClick={() => handleMealDetails(category.strCategory)}
-            />
-            <p className='cat_description'>{category.strCategoryDescription}</p>
-            <NavLink className="arrow" to={`/meals_categories/${category.strCategory}`}>
-              <TiArrowForwardOutline />
-            </NavLink>
-          </div>
-        ))
+        {loading ? (
+          <h1>Loading...</h1>
+        ) : (
+          categories.map((category) => (
+            <div key={category.idCategory} className="category_div">
+              <h1 className="cat_heading">{category.strCategory}</h1>
+              <img
+                src={category.strCategoryThumb}
+                alt={category.strCategory}
+                className="categoriesImg"
+              />
+              <p className="cat_description">
+                {showMore
+                  ? category.strCategoryDescription
+                  : `${category.strCategoryDescription.slice(0, 100)}...`}
+                <span onClick={handleShowMore} className="showMore">
+                  Show More
+                </span>
+              </p>
+              <NavLink
+                className="arrow"
+                to={`/meals_categories/${category.strCategory}`}
+              >
+                <TiArrowForwardOutline />
+              </NavLink>
+            </div>
+          ))
         )}
       </div>
 
