@@ -1,10 +1,9 @@
 .trial {
-  background: linear-gradient(90deg, #C73866 0%, #FE676E 100%);
+  background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
 }
 
 .todo {
-    background: linear-gradient(90deg, #C73866 0%, #FE676E 100%);
-
+  background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
 }
 .todo span {
   display: flex;
@@ -14,4 +13,78 @@
 
 .categories_sect {
   padding: 20px;
+}
+
+.categories_div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.category_div {
+  position: relative;
+  overflow: hidden;
+  height: 370px;
+}
+
+.categoriesImg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cat_description {
+  margin: 1px;
+  position: absolute;
+  inset: 0;
+  font-size: 13px;
+  padding: 5px;
+  background: rgba(110, 7, 40, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.cat_heading {
+  text-align: center;
+}
+
+.categoriesImg,
+.cat_description {
+  transition: 0.3s ease-in-out;
+}
+
+.category_div > .cat_description {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.category_div:hover > .cat_description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.category_div:hover > .categoriesImg {
+  transform: scale(1.1);
+  filter: blur(6px);
+}
+
+.category_div:hover > .cat_heading {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 4rem;
+  right: 10%;
+  top: 10%;
+  color: black;
+  opacity: 0;
+}
+
+.category_div:hover > .arrow {
+  opacity: 1;
 }

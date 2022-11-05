@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import  { TiArrowForwardOutline } from "react-icons/ti";
 import "./categories.css";
 import { fetchCategories } from "../../../Redux/Meals/categoriesslice";
 import { useNavigate, NavLink } from "react-router-dom";
@@ -22,6 +22,15 @@ const Categories = ({ type }) => {
   const handleRegularDrinks = () => {
     navigate("/regular");
   };
+
+  const handleMealDetails = (cat) => {
+    navigate(`/meals_categories/${cat}`);
+  };
+
+  // const handleHover = (e) => {
+  //   e.target.style.display = "rgb(255, 255, 255)";
+  //   e.target.style.color = "rgb(0, 0, 0)";
+  // };
 
   // const handleAreas = () => {
   //   navigate("/areas");
@@ -60,26 +69,27 @@ const Categories = ({ type }) => {
       <h1 className="categories_head" >
         Meals Categories
       </h1>
+      <div className="categories_div">
       {loading ? (
         <h1>Loading...</h1>
       ) : (
         categories.map((category) => (
-          <div key={category.idCategory}>
-            <h1>{category.strCategory}</h1>
+          <div key={category.idCategory} className='category_div'>
+            <h1 className="cat_heading">{category.strCategory}</h1>
             <img
               src={category.strCategoryThumb}
               alt={category.strCategory}
               className="categoriesImg"
+              // onClick={() => handleMealDetails(category.strCategory)}
             />
-            <NavLink
-              className="arrow"
-              to={`/meals_categories/${category.strCategory}`}
-            >
-              <FaLongArrowAltRight />
+            <p className='cat_description'>{category.strCategoryDescription}</p>
+            <NavLink className="arrow" to={`/meals_categories/${category.strCategory}`}>
+              <TiArrowForwardOutline />
             </NavLink>
           </div>
         ))
-      )}
+        )}
+      </div>
 
       {/* drinks section */}
       <h1 style={{ textDecoration: "underline", color: "red" }}>Drinks</h1>
