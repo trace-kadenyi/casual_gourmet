@@ -6,7 +6,7 @@ import { fetchCategories } from "../../../Redux/Meals/categoriesslice";
 import { useNavigate, NavLink } from "react-router-dom";
 import Navbar from "../MealsNavigation/Navbar";
 
-const Categories = ({ type }) => {
+const Categories = () => {
   const [showMore, setShowMore] = useState(false);
   const { categories, loading } = useSelector((state) => state.mealsCategories);
   const dispatch = useDispatch();
@@ -27,6 +27,11 @@ const Categories = ({ type }) => {
   const handleShowMore = (e) => {
     setShowMore(!showMore);
     e.target.innerText = showMore ? "Show More" : "Show Less";
+  };
+
+  // assign specific class to each category
+  const assignClass = (category) => {
+    return category.toLowerCase().replace(" ", "-");
   };
 
   return (
@@ -65,7 +70,10 @@ const Categories = ({ type }) => {
           <h1>Loading...</h1>
         ) : (
           categories.map((category) => (
-            <div key={category.idCategory} className="category_div">
+            <div
+              key={category.idCategory}
+              className={`category_div ${assignClass(category.strCategory)}`}
+            >
               <h1 className="cat_heading">{category.strCategory}</h1>
               <img
                 src={category.strCategoryThumb}
