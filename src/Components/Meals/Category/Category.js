@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, NavLink } from "react-router-dom";
+import { TiArrowForwardOutline } from "react-icons/ti";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -41,8 +42,18 @@ const Category = () => {
     navigate(`/meals_categories/${category}/${id}`);
   };
 
+  // assign specific class to each category
+
+  const assignClass = (category) => {
+    return `${category.toLowerCase().replace(" ", "_")}_cat`;
+  };
+
   return (
-    <div className="individual_category">
+    <div
+      className={`individual_category ${assignClass(
+        foundCategory.strCategory
+      )}`}
+    >
       <Navbar type="category" />
       {loading ? (
         <h1>Loading...</h1>
@@ -50,7 +61,7 @@ const Category = () => {
         <div>
           <h1>{foundCategory.strCategory} Recipes</h1>
           <div>
-            <div>
+            <div className="one_cat">
               {fetchedCategory.status === 200 ? (
                 fetchedCategory.data.meals.map((meal, index) => (
                   <div key={index} className="individual_items">
@@ -66,8 +77,17 @@ const Category = () => {
                       className="meal_title"
                       onClick={(e) => navigateToMealDetails(e.target.id)}
                     >
-                      {meal.strMeal}
+                      {meal.strMeal.length > 20
+                        ? `${meal.strMeal.slice(0, 20)}...`
+                        : meal.strMeal}
                     </h4>
+
+                    <NavLink
+                      to={`/meals_categories/${category}/${meal.idMeal}`}
+                      className="arrow"
+                    >
+                      <TiArrowForwardOutline />
+                    </NavLink>
                   </div>
                 ))
               ) : (

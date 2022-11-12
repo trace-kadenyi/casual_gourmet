@@ -31,7 +31,7 @@ const Categories = () => {
 
   // assign specific class to each category
   const assignClass = (category) => {
-    return category.toLowerCase().replace(" ", "-");
+    return category.toLowerCase().replace(" ", "_");
   };
 
   return (
