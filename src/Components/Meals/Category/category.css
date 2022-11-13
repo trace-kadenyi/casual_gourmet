@@ -1,3 +1,6 @@
+.individual_category {
+  overflow: hidden;
+}
 .one_cat {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -53,4 +56,109 @@
     url("../../../assets/dessert.jpg");
   background-position: center center;
   background-blend-mode: color;
+}
+
+.beef_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/beef.jpg");
+  background-position: center center;
+}
+
+.vegetarian_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/vegetarian.jpg");
+  background-position: center center;
+}
+
+.chicken_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/chicken.jpg");
+  background-position: center center;
+}
+
+.pork_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/pork.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.goat_cat {
+  height: 100vh;
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/goat.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.breakfast_cat {
+  height: 100vh;
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/breakfast.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.seafood_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/seafood.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.side_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/side.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.starter_cat {
+  height: 100vh;
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/starter.jpg");
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.lamb_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/lamb.webp");
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.miscellaneous_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/miscellaneous.jpg");
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+.pasta_cat {
+   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/pasta.jpg");
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.vegan_cat {
+  height: 100vh;
+  overflow-y: hidden;
+   background: linear-gradient(rgba(71, 68, 68, 0.7), rgba(77, 26, 26, 0.7)),
+    url("../../../assets/vegan.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -74,17 +74,23 @@ const MealDetails = () => {
                         alt={meal.strMeal}
                       />
                       <h1>{meal.strMeal}</h1>
-                      <h5>{meal.strArea}</h5>
+                    <h5>{meal.strArea}</h5>
+                    <p>{meal.strCategory}</p>
                       <p>{meal.strInstructions}</p>
                       <h3>Ingredients</h3>
                       <ul>
                         {ingredients.map((ingredient, index) => (
                           <li key={index}>{ingredient}</li>
                         ))}
-                      </ul>
+                    </ul>
+                      <div>
+                  <a href={meal.strYoutube} target="_blank">Youtube Video</a>
+                    </div>
+                    <p>{meal.strTags ? `Tags: ${meal.strTags}` : <span>No tags</span>}</p>
                     </div>
                   ))
-                : null}
+                  : null}
+              
             </div>
           </div>
         </div>
