@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
+
+// import "bulma/css/bulma.min.css";
 
 import "./meal_details.css";
 import Navbar from "../MealsNavigation/Navbar";
+import tube from "../../../assets/youtube.png";
 
 const MealDetails = () => {
   const [fetchedMealDetails, setFetchedMealDetails] = useState([]);
+  const [more, setMore] = useState(false);
   const { categories, loading } = useSelector((state) => state.mealsCategories);
 
   const { id } = useParams();
@@ -54,6 +59,12 @@ const MealDetails = () => {
   // call handleIngredients function
   handleIngredients();
 
+  // handle more button for recipe instructions
+  const handleShowMore = (e) => {
+    setMore(!more);
+    e.target.innerText = more ? "Show More" : "Show Less";
+  };
+
   return (
     <div className="individual_meal">
       <Navbar type="meal_details" />
@@ -61,36 +72,114 @@ const MealDetails = () => {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <h1>Meal Details</h1>
           <div>
             <div>
               {fetchedMealDetails.status === 200
                 ? fetchedMealDetails.data.meals.map((meal, index) => (
                     <div key={index} className="individual_meal_details">
-                      <img
+                      <h1 className="meal_name">
+                        {meal.strMeal}
+                      </h1>
+                      {/* <img
                         id={meal.idMeal}
-                        className="recipe_image"
+                        className="meal_image"
                         src={meal.strMealThumb}
                         alt={meal.strMeal}
-                      />
-                      <h1>{meal.strMeal}</h1>
-                    <h5>{meal.strArea}</h5>
-                    <p>{meal.strCategory}</p>
-                      <p>{meal.strInstructions}</p>
-                      <h3>Ingredients</h3>
-                      <ul>
-                        {ingredients.map((ingredient, index) => (
-                          <li key={index}>{ingredient}</li>
-                        ))}
-                    </ul>
-                      <div>
-                  <a href={meal.strYoutube} target="_blank">Youtube Video</a>
-                    </div>
-                    <p>{meal.strTags ? `Tags: ${meal.strTags}` : <span>No tags</span>}</p>
+                      /> */}
+                      <div className="fun_facts">
+                        <p className="facts">Fun Facts</p>
+                        <p>
+                          <span className="basics">Country of Origin: </span>
+                          {meal.strArea}
+                        </p>
+                        <p>
+                          <span className="basics">Category:</span>{" "}
+                          {meal.strCategory}
+                        </p>
+                        <p>
+                          <span className="basics">Tags:</span>{" "}
+                          {meal.strTags
+                            ? meal.strTags.split(",").join(", ")
+                            : "No tags available"}
+                        </p>
+                      </div>
+
+                      <p className="prep">
+                        PREPARATION
+                      </p>
+                      <p className="instructions mt-5">
+                        {/* add see more button */}
+                        {more
+                          ? meal.strInstructions
+                              .split(". ")
+                              .map((instruction, index) => (
+                                <span key={index}>
+                                  {instruction}.
+                                  <br />
+                                </span>
+                              ))
+                          : meal.strInstructions
+                              .split(". ")
+                              .slice(0, 3)
+                              .map((instruction, index) => (
+                                <span key={index}>
+                                  {instruction}.
+                                  <br />
+                                </span>
+                              ))}
+                        <button
+                          className="showmore_recipe"
+                          onClick={handleShowMore}
+                        >
+                          Show More
+                        </button>
+                      </p>
+                      {/* ingredients */}
+                      <p className="ingredient_head">
+                        Ingredients
+                      </p>
+                      <div className="section">
+                        <div className="container">
+                          <div className="columns is-multiline">
+                            {ingredients.map((ingredient, index) => (
+                              <div key={index} className="column is-half">
+                                <div className="card ingredient_card">
+                                  <div className="card-content">
+                                    <div className="content">
+                                      <p className="ingredient_span">
+                                        <span>{ingredient.split("-")[0]} </span>
+                                        <span>-</span>
+                                        <span className="measurement">
+                                          {ingredient.split("-")[1]}
+                                        </span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      {/* video */}
+                    <div className="vid_div">
+                      <p className="video_head">
+                        Video
+                      </p>
+                      <p className="vid_instructions">
+                        Need more guidance? Watch the video below for the visual on how to prepare this meal. Have fun with it!
+                      </p>
+                        <a href={meal.strYoutube} target="_blank">
+                        <img
+                          className="tube"
+                          src={tube}
+                          alt="youtube"
+                        />
+                      </a>
+                      </div>
                     </div>
                   ))
-                  : null}
-              
+                : null}
             </div>
           </div>
         </div>

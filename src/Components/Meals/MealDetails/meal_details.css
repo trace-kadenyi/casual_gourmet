@@ -1,0 +1,97 @@
+.ingredient_span {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  color: white;
+}
+
+.measurement {
+  justify-self: end;
+}
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.ingredient_card {
+  background: linear-gradient(90deg, 
+    #c73866 0%, #fe676e 100%
+  );
+  width: 40vw;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.showmore_recipe {
+  padding: 5px;
+  border-radius: 5px;
+  border-color: #fe676e;
+  background-color: rgb(233, 223, 223);
+  color: #c73866;
+}
+
+
+.ingredient_head,
+.prep,
+.facts,
+.meal_name,
+.video_head {
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: cursive;
+  text-decoration: overline;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.fun_facts > * {
+  text-align: center;
+}
+
+.meal_image {
+  width: 30%;
+  height: auto
+}
+
+.basics {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.instructions {
+  width: 90vw;
+  margin: 0 auto;
+  letter-spacing: 0.04rem;
+  line-height:2rem;
+  text-align: center;
+}
+
+.vid_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.tube {
+  width: 70px;
+}
+
+.vid_instructions {
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .ingredient_card {
+    width: 80vw;
+  }
+  .meal_image {
+    width: 50%;
+  }
+}

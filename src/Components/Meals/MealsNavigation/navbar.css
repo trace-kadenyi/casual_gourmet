@@ -26,3 +26,11 @@
   cursor: pointer;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .nav_list,
+  .header {
+    flex-direction: column;
+  }
+}
+  
