@@ -59,7 +59,7 @@ const MealsPerArea = () => {
                 </div>
               ))
             ) : (
-              <h1>No meals found</h1>
+              <h1>Loading...</h1>
             )}
           </div>
         </div>
