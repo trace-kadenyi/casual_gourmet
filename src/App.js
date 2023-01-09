@@ -6,6 +6,10 @@ import LandingPage from "./Pages/LandingPage/LandingPage";
 import About from "./Pages/AboutPage/About";
 import Category from "./Components/Meals/Category/Category";
 import Categories from "./Components/Meals/Categories/Categories";
+import MealDetails from "./Components/Meals/MealDetails/MealDetails";
+import Areas from "./Components/Meals/Areas/Areas";
+import MealsPerArea from "./Components/Meals/Areas/MealsPerArea";
+import FunCorner from "./Components/Meals/FunCorner/FunCorner";
 
 const App = () => {
   return (
@@ -17,6 +21,13 @@ const App = () => {
         <Route path="/regular" element={<RegularDrinks />} />
         <Route path="/about" element={<About />} />
         <Route path="/meals_categories/:category" element={<Category />} />
+        <Route
+          path="/meals_categories/:category/:id"
+          element={<MealDetails />}
+        />
+        <Route path="/areas" element={<Areas />} />
+        <Route path="/areas/:area" element={<MealsPerArea />} />
+        <Route path="/fun_corner" element={<FunCorner />} />
       </Routes>
     </Router>
   );

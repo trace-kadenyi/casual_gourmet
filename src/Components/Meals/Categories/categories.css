@@ -1,3 +1,137 @@
 .trial {
-  background: linear-gradient(90deg, #C73866 0%, #FE676E 100%);
+  background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
+}
+
+.todo {
+  background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
+  /* background: linear-gradient(rgba(70, 26, 26, 0.7), rgba(71, 10, 10, 0.7)),
+    url("../../../assets/splash4.jpg"); */
+}
+.todo span {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categories_sect {
+   height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(rgba(73, 48, 48, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/categories1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* background-size:100% 100%;     */
+  /* background-blend-mode: color;   */
+  color: #fff;
+}
+
+.categories_div {
+  padding: 20px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.category_div {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.categoriesImg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.cat_description {
+  margin: 1px;
+  position: absolute;
+  inset: 0;
+  font-size: 13px;
+  padding: 5px;
+  /* background: rgba(63, 5, 23, 0.5); */
+  background: rgba(66, 17, 17, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.cat_heading {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-decoration: overline;
+}
+/* .beef h1{
+  color: red;
+}
+
+.chicken h1 {
+  color: purple;
+}
+
+.vegetarian h1 {
+  color: green;
+}
+
+.pork h1 {
+  color: orange;
+} */
+
+.categoriesImg,
+.cat_description {
+  transition: 0.3s ease-in-out;
+}
+
+.category_div > .cat_description {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.category_div:hover > .cat_description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.category_div:hover > .categoriesImg {
+  transform: scale(1.1);
+  filter: blur(6px);
+}
+
+.category_div:hover > .cat_heading {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 4rem;
+  right: 10%;
+  top: 10%;
+  color: white;
+  opacity: 0;
+}
+
+.category_div:hover > .arrow {
+  opacity: 1;
+}
+
+.showMore {
+  position: absolute;
+  bottom: 2px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+
 }
