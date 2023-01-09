@@ -26,6 +26,7 @@
 }
 
 .showmore_recipe {
+  cursor: pointer;
   padding: 5px;
   border-radius: 5px;
   border-color: #fe676e;
