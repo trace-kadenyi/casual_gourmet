@@ -12,4 +12,20 @@
   padding: 5px;
   margin: 5px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.main_ingredient_btn {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.searches {
+  display: flex;
+  flex-direction: column;
+}
+
+.searches > * {
+  width: 300px;
+  margin: 10px;
 }

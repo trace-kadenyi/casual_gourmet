@@ -13,9 +13,12 @@ import "./fun_corner.css";
 
 const FunCorner = () => {
   const [country, setCountry] = useState("");
+  // const [ingredient, setIngredient] = useState("");
   const navigate = useNavigate();
   const { areas, loading } = useSelector((state) => state.areas);
   const dispatch = useDispatch();
+    const [fetchedMainIngredient, setFetchedMainIngredient] = useState([]);
+
   
   useEffect(() => {
     dispatch(fetchAreas());
@@ -26,7 +29,7 @@ const FunCorner = () => {
   const foundArea = areas.find((area) => area.strArea === country);
   
 
-  const handleChange = () => {
+  const handleCountry = () => {
     if (foundArea) {
       navigate(`/areas/${country}`);
     }
@@ -38,22 +41,12 @@ const FunCorner = () => {
     
   }
 
-
-  //   const handleChange = () => {
-  //   // navigate(`/areas/${country}`);
-  //   if (foundArea) {
-  //     navigate(`/areas/${country}`);
-  //   } else {
-  //     swal(
-  //       "NB: Some countries are not represented in the database.",
-  //       "Please enter a valid country of origin (i.e. American, British, Canadian, Chinese, Croatian, Dutch, Egyptian, French, Greek, Indian, Irish, Italian, Jamaican, Japanese, Kenyan, Malaysian, Mexican, Moroccan, Polish, Portuguese, Russian, Spanish, Thai, Tunisian, Turkish, Unknown, Vietnamese)."
-  //     );
-  //   }
-  // };
-
-  const fetchByMainIngredient = () => {
-
+  const handleMainIngredient = () => {
+    navigate(`/main_ingredient`);
   }
+
+
+ 
 
   return (
     <section className="fun_corner_sect">
@@ -62,19 +55,25 @@ const FunCorner = () => {
         <h3>Fun Corner</h3>
         <p>
           Spice up your cooking experience in this little fun corner. </p>
-        {/* country of origin */}
+        <div className="searches">
+          {/* country of origin */}
+          <div>
         <input type="text" placeholder="Search by Country of Origin" className="fun_input" value={country} onChange={(e) => setCountry(e.target.value)} />
-        <button className="go" onClick={handleChange}>Go</button>
-        {/* main ingredient */}
-        <input type="text" placeholder="Search by Main Ingredient" className="fun_input" />
-        <button className="go">Go</button>
+            <button className="go" onClick={handleCountry}>Go</button>
+          </div>
+
+        {/* {/* main ingredient */}
+       
+        <button className="main_ingredient_btn" onClick={handleMainIngredient}>Search By Main Ingredient</button>
           
+          </div>
           {/* <ul>
             <li>Country of Origin</li>
             <li>First letter</li>
             <li>Main ingredient</li>
             <li>Name</li>
           </ul> */}
+
         <p>Want to be even more spontaneous? Click the random button to get a random meal.</p>
 
       </div>
