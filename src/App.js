@@ -10,6 +10,7 @@ import MealDetails from "./Components/Meals/MealDetails/MealDetails";
 import Areas from "./Components/Meals/Areas/Areas";
 import MealsPerArea from "./Components/Meals/Areas/MealsPerArea";
 import FunCorner from "./Components/Meals/FunCorner/FunCorner";
+import MainIngredient from "./Components/Meals/MainIngredient/MainIngredient";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/areas" element={<Areas />} />
         <Route path="/areas/:area" element={<MealsPerArea />} />
         <Route path="/fun_corner" element={<FunCorner />} />
+        <Route path="/main_ingredient" element={<MainIngredient />} />
       </Routes>
     </Router>
   );
