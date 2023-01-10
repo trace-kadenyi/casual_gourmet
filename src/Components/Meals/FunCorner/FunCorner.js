@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
+import { BiWorld } from "react-icons/bi";
 
 import Navbar from "../MealsNavigation/Navbar";
 import { fetchAreas } from "../../../Redux/Meals/areaslice";
@@ -30,7 +31,7 @@ const FunCorner = () => {
     } else {
       swal(
         "NB: Some countries are not represented in the database.",
-        "Please enter a valid country of origin and capitalize the first letter (i.e. American, British, Canadian, Chinese, Croatian, Dutch, Egyptian, French, Greek, Indian, Irish, Italian, Jamaican, Japanese, Kenyan, Malaysian, Mexican, Moroccan, Polish, Portuguese, Russian, Spanish, Thai, Tunisian, Turkish, Unknown, Vietnamese)."
+        "Please enter a valid country of origin and remember to capitalize the first letter (i.e. American, British, Canadian, Chinese, Croatian, Dutch, Egyptian, French, Greek, Indian, Irish, Italian, Jamaican, Japanese, Kenyan, Malaysian, Mexican, Moroccan, Polish, Portuguese, Russian, Spanish, Thai, Tunisian, Turkish, Unknown, Vietnamese)."
       );
     }
   };
@@ -74,67 +75,90 @@ const FunCorner = () => {
     <section className="fun_corner_sect">
       <Navbar type="fun_corner" />
       <div className="fun_corner_div">
-        <h3>Fun Corner</h3>
-        <p>Spice up your cooking experience in this little fun corner. </p>
-        <div className="searches">
-          {/* search by country of origin */}
-          <div>
-            <input
-              type="text"
-              placeholder="Search by Country of Origin"
-              className="fun_input"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-            />
-            <button className="go" onClick={handleCountry}>
-              Go
-            </button>
-          </div>
-
-          {/* {/* search by main ingredient */}
-          <div>
-            <button
-              className="main_ingredient_btn"
-              onClick={handleMainIngredient}
-            >
-              Search By Main Ingredient
-            </button>
-          </div>
-          {/* search by first letter */}
-          <div>
-            <button className="first_letter_btn" onClick={handleFirstLetter}>
-              Search By First Letter
-            </button>
-          </div>
-
-          {/* search by name */}
-          <div>
-            <button className="name_btn" onClick={handleName}>
-              Search By Name
-            </button>
-          </div>
-        </div>
-        {/* random meal */}
-        <p>
-          Want to be even more spontaneous? Click the random button to get a
-          random meal.
+        <h3 className="fun_intro">
+          Spice up your cooking experience in this little fun corner.{" "}
+        </h3>
+        <p className="fun_intro_para">
+          Cooking can be a fun venture if you want it to be. <br /> On this
+          page, you can search for various meal recipes based on its origin,
+          name or main ingredient. <br /> You can even take it further and
+          choose what to cook based on the first letter! <br /> So...
+          <br /> Get your apron...
+          <br /> Raid your kitchen cabinets to see what ingredients you already
+          have...
+          <br /> And let's get cooking...
         </p>
-        <button onClick={handleRandomMeal}>Random</button>
 
-        <div className="random_meal">
-          {fetchedRandomMeal.map((meal) => {
-            return (
-              <div key={meal.idMeal}>
-                <h3>{meal.strMeal}</h3>
-                <img
-                  className="recipe_image"
-                  src={meal.strMealThumb}
-                  alt={meal.strMeal}
-                  onClick={() => handleIndividualMeal(meal.idMeal)}
+        <div className="all_queries">
+          {/* search buttons/input fields */}
+          <div className="search_bys">
+            <h3>Search by:</h3>
+            <div className="searches">
+              {/* {/* search by main ingredient */}
+              <p className="main_ingredient_btn">
+                Main Ingredient{" "}
+                <button onClick={handleMainIngredient} className="click">
+                  GO
+                </button>
+              </p>
+              {/* search by first letter */}
+              <p className="first_letter_btn">
+                First Letter{" "}
+                <button className="click" onClick={handleFirstLetter}>
+                  GO
+                </button>
+              </p>
+
+              {/* search by name */}
+              <p className="name_btn">
+                Name{" "}
+                <button onClick={handleName} className="click">
+                  GO
+                </button>
+              </p>
+
+              {/* search by country of origin */}
+              <div className="origin">
+                <input
+                  type="text"
+                  placeholder="Input Origin/Country"
+                  autoFocus
+                  required
+                  className="fun_input"
+                  value={country}
+                  onChange={(e) => setCountry(e.target.value)}
                 />
+                <button className="go" onClick={handleCountry}>
+                  <BiWorld className="world" />
+                </button>
               </div>
-            );
-          })}
+            </div>
+          </div>
+
+          {/* random meal */}
+          <div className="randoms">
+            <p>
+              Want to be even more adventurous? Click the random button to get a
+              random meal recipe.
+            </p>
+            <button onClick={handleRandomMeal} className="random_btn">Random</button>
+
+            <div className="random_meal">
+              {fetchedRandomMeal.map((meal) => {
+                return (
+                  <div key={meal.idMeal}>
+                    <h3>{meal.strMeal}</h3>
+                    <img
+                      className="recipe_image"
+                      src={meal.strMealThumb}
+                      alt={meal.strMeal}
+                      onClick={() => handleIndividualMeal(meal.idMeal)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>
