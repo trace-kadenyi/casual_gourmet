@@ -15,7 +15,8 @@
   border-radius: 5px;
 }
 
-.main_ingredient_btn {
+.main_ingredient_btn,
+.first_letter_btn {
   padding: 10px;
   border-radius: 10px;
 }
