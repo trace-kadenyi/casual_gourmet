@@ -76,7 +76,7 @@ const FunCorner = () => {
       <Navbar type="fun_corner" />
       <div className="fun_corner_div">
         <h3 className="fun_intro">
-          Spice up your cooking experience in this little fun corner.{" "}
+          Spice up your cooking experience in this little fun corner{" "}
         </h3>
         <p className="fun_intro_para">
           Cooking can be a fun venture if you want it to be. <br /> On this
@@ -92,7 +92,7 @@ const FunCorner = () => {
         <div className="all_queries">
           {/* search buttons/input fields */}
           <div className="search_bys">
-            <h3>Search by:</h3>
+            <h3>Search By</h3>
             <div className="searches">
               {/* {/* search by main ingredient */}
               <p className="main_ingredient_btn">
@@ -141,15 +141,17 @@ const FunCorner = () => {
               Want to be even more adventurous? Click the random button to get a
               random meal recipe.
             </p>
-            <button onClick={handleRandomMeal} className="random_btn">Random</button>
+            <button onClick={handleRandomMeal} className="random_btn">
+              Random
+            </button>
 
             <div className="random_meal">
               {fetchedRandomMeal.map((meal) => {
                 return (
-                  <div key={meal.idMeal}>
-                    <h3>{meal.strMeal}</h3>
+                  <div className="random_div" key={meal.idMeal}>
+                    <h3 className="random_title">{meal.strMeal}</h3>
                     <img
-                      className="recipe_image"
+                      className="random_img"
                       src={meal.strMealThumb}
                       alt={meal.strMeal}
                       onClick={() => handleIndividualMeal(meal.idMeal)}
