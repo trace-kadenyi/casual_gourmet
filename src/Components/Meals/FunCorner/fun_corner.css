@@ -4,7 +4,6 @@
 }
 
 .fun_input {
-  padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: bold;
@@ -13,6 +12,8 @@
   border-bottom-right-radius: 60px;
   padding: 25px;
   letter-spacing: 0.1rem;
+  outline: none;
+  width: 200px;
 }
 
 .origin {
@@ -25,7 +26,9 @@
 
 .go {
   cursor: pointer;
-  border: none;
+  border: 1px #c73866 solid;
+  border-radius: 10px;
+  background: #c73866;
 }
 
 .main_ingredient_btn,
@@ -59,7 +62,9 @@
 
 .fun_intro {
   letter-spacing: 0.1rem;
-  text-align: center;
+  border-bottom: 1px black solid;
+  width: max-content;
+  margin: 0 auto;
 }
 
 .fun_intro_para {
@@ -89,9 +94,8 @@
 }
 
 .world {
-  color: rgb(182, 59, 79);
   font-size: 1.5rem;
-  background: white;
+  color: white;
 }
 
 .world:hover {
@@ -103,14 +107,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50vw;
-  border: 1px #c73866 solid;
+  width: 55vw;
+  border: none;
+  padding-bottom: 20px;
   border-radius: 20px;
+  background: linear-gradient(rgba(95, 37, 37, 0.7), rgba(70, 62, 62, 0.7)),
+    url("../../../assets/random.jpg");
+}
+
+.search_bys h3 {
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .all_queries {
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 
 .randoms {
@@ -118,8 +131,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    border: 1px #c73866 solid;
-border-radius: 20px;
+  border-radius: 20px;
+  border: none;
+  padding-bottom: 20px;
+  background: linear-gradient(rgba(133, 47, 47, 0.7), rgba(48, 42, 42, 0.7)),
+    url("../../../assets/search_by.jpg");
 }
 
 .random_btn {
@@ -138,7 +154,6 @@ border-radius: 20px;
 .random_btn:hover {
   width: 120px;
   letter-spacing: 0.15rem;
-  text-decoration: overline;
   font-style: italic;
   background: black;
   border: 2px #c73866 solid;
@@ -146,4 +161,54 @@ border-radius: 20px;
 
 .randoms p {
   text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.random_title {
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.random_img {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.random_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .all_queries {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search_bys {
+    width: 90vw;
+  }
+
+  .random_title {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .fun_input {
+    padding: 10px;
+  }
+
+  .random_img {
+    width: 200px;
+    height: auto;
+  }
 }
