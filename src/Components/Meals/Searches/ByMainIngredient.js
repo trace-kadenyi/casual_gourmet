@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../MealsNavigation/Navbar";
+import "./searches.css";
 
 const ByMainIngredient = () => {
   const [ingredient, setIngredient] = useState("");
@@ -32,34 +33,40 @@ const ByMainIngredient = () => {
   return (
     <section>
       <Navbar type="meal_details" />
-      <div>
+      <div className="search_div">
         <h1>Search by Main Ingredient</h1>
-        <input
-          type="text"
-          placeholder="Enter main ingredient"
-          value={ingredient}
-          onChange={(e) => setIngredient(e.target.value)}
-        />
-        <button onClick={fetchByMainIngredient}>Go</button>
-
+        <div className="input_go">
+          <input
+            className="search_input"
+            type="text"
+            placeholder="Enter main ingredient"
+            value={ingredient}
+            onChange={(e) => setIngredient(e.target.value)}
+          />
+          <button className="go_btn" onClick={fetchByMainIngredient}>
+            Go
+          </button>
+        </div>
         {/* display meals if present in the database */}
-        {fetchedMainIngredient ? (
-          fetchedMainIngredient.map((item) => {
-            return (
-              <div key={item.idMeal}>
-                <h3>{item.strMeal}</h3>
-                <img
-                  className="recipe_image"
-                  src={item.strMealThumb}
-                  alt={item.strMeal}
-                  onClick={() => handleIndividualMeal(item.idMeal)}
-                />
-              </div>
-            );
-          })
-        ) : (
-          <h1>No Meals Found Yet...</h1>
-        )}
+        <div className="one_cat">
+          {fetchedMainIngredient ? (
+            fetchedMainIngredient.map((item) => {
+              return (
+                <div className="individual_items" key={item.idMeal}>
+                  <img
+                    className="recipe_image"
+                    src={item.strMealThumb}
+                    alt={item.strMeal}
+                    onClick={() => handleIndividualMeal(item.idMeal)}
+                  />
+                  <h3 className="meal_title search_head">{item.strMeal}</h3>
+                </div>
+              );
+            })
+          ) : (
+            <h1 className="search_found">No Meals Found Yet...</h1>
+          )}
+        </div>
       </div>
     </section>
   );
