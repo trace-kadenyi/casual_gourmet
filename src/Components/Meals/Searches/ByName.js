@@ -41,6 +41,7 @@ const ByName = () => {
             type="text"
             className="search_input"
             placeholder="Enter name"
+            autoFocus
             value={name}
             onChange={(e) => setName(e.target.value)}
           />

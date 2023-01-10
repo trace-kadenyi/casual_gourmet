@@ -40,6 +40,7 @@ const ByMainIngredient = () => {
             className="search_input"
             type="text"
             placeholder="Enter main ingredient"
+            autoFocus
             value={ingredient}
             onChange={(e) => setIngredient(e.target.value)}
           />

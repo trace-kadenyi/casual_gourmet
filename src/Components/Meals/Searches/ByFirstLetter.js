@@ -40,6 +40,7 @@ const ByFirstLetter = () => {
             type="text"
             className="search_input"
             placeholder="Enter first letter"
+            autoFocus
             value={letter}
             onChange={(e) => setLetter(e.target.value)}
           />
