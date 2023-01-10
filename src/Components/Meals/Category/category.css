@@ -39,18 +39,6 @@
   font-style: italic;
 }
 
-/* .beef_cat {
-  background-color: red;
-}
-
-.chicken_cat {
-  background-color: purple;
-}
-
-.vegetarian_cat {
-  background-color: green;
-} */
-
 .dessert_cat {
   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/dessert.jpg");
