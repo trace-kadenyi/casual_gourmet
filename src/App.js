@@ -8,9 +8,11 @@ import Category from "./Components/Meals/Category/Category";
 import Categories from "./Components/Meals/Categories/Categories";
 import MealDetails from "./Components/Meals/MealDetails/MealDetails";
 import Areas from "./Components/Meals/Areas/Areas";
-import MealsPerArea from "./Components/Meals/Areas/MealsPerArea";
+import MealsPerArea from "./Components/Meals/Searches/MealsPerArea";
 import FunCorner from "./Components/Meals/FunCorner/FunCorner";
-import MainIngredient from "./Components/Meals/MainIngredient/MainIngredient";
+import ByMainIngredient from "./Components/Meals/Searches/ByMainIngredient";
+import ByFirstLetter from "./Components/Meals/Searches/ByFirstLetter";
+import ByName from "./Components/Meals/Searches/ByName";
 
 const App = () => {
   return (
@@ -29,7 +31,9 @@ const App = () => {
         <Route path="/areas" element={<Areas />} />
         <Route path="/areas/:area" element={<MealsPerArea />} />
         <Route path="/fun_corner" element={<FunCorner />} />
-        <Route path="/main_ingredient" element={<MainIngredient />} />
+        <Route path="/main_ingredient" element={<ByMainIngredient />} />
+        <Route path="/first_letter" element={<ByFirstLetter />} />
+        <Route path="/name" element={<ByName />} />
       </Routes>
     </Router>
   );
