@@ -11,6 +11,7 @@ import "./fun_corner.css";
 
 const FunCorner = () => {
   const [country, setCountry] = useState("");
+  const [fetchedRandomMeal, setFetchedRandomMeal] = useState([]);
   const navigate = useNavigate();
   const { areas, loading } = useSelector((state) => state.areas);
   const dispatch = useDispatch();
@@ -34,19 +35,39 @@ const FunCorner = () => {
     }
   };
 
-  // handle main ingredient
+  // handle search by main ingredient
   const handleMainIngredient = () => {
     navigate(`/main_ingredient`);
   };
 
-  // handle first letter
+  // handle search by first letter
   const handleFirstLetter = () => {
     navigate("/first_letter");
   };
 
-  // handle name
+  // handle search by name
   const handleName = () => {
     navigate("/name");
+  };
+
+  // handle search by random meal
+  let randomMeal;
+
+  const handleRandomMeal = async () => {
+    await axios
+      .get(`https://www.themealdb.com/api/json/v1/1/random.php`)
+      .then((response) => {
+        randomMeal = response.data.meals;
+        setFetchedRandomMeal(randomMeal);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // handle individual meal
+  const handleIndividualMeal = (id) => {
+    navigate(`/meals_categories/:category/${id}`);
   };
 
   return (
@@ -56,7 +77,7 @@ const FunCorner = () => {
         <h3>Fun Corner</h3>
         <p>Spice up your cooking experience in this little fun corner. </p>
         <div className="searches">
-          {/* country of origin */}
+          {/* search by country of origin */}
           <div>
             <input
               type="text"
@@ -70,7 +91,7 @@ const FunCorner = () => {
             </button>
           </div>
 
-          {/* {/* main ingredient */}
+          {/* {/* search by main ingredient */}
           <div>
             <button
               className="main_ingredient_btn"
@@ -79,46 +100,43 @@ const FunCorner = () => {
               Search By Main Ingredient
             </button>
           </div>
-          {/* first letter */}
+          {/* search by first letter */}
           <div>
             <button className="first_letter_btn" onClick={handleFirstLetter}>
               Search By First Letter
             </button>
           </div>
 
-          {/* name */}
+          {/* search by name */}
           <div>
             <button className="name_btn" onClick={handleName}>
               Search By Name
             </button>
           </div>
         </div>
-        {/* <ul>
-         
-            <li>Name</li>
-          </ul> */}
-
+        {/* random meal */}
         <p>
           Want to be even more spontaneous? Click the random button to get a
           random meal.
         </p>
-      </div>
+        <button onClick={handleRandomMeal}>Random</button>
 
-      {/* <div className="todo">
-        <h3>TODO</h3>
-        <p>
-        // spice up your cooking experience in this little fun corner. You can search for meals by:
-        // Want to be even more spontaneous? Click the random button to get a random meal.
-          1. Search by:
-          <span>b. Country of Origin- www.themealdb.com/api/json/v1/1/filter.php?a=Canadian</span>
-          <span>c. First letter- www.themealdb.com/api/json/v1/1/search.php?f=a</span>
-          <span>d. Main ingredient- www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast</span>
-          <span>e. Name - www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata</span>
-          <span>f. Random - www.themealdb.com/api/json/v1/1/random.php</span>
-        </p>
-        <p>3. Ingredient Details - www.themealdb.com/api/json/v1/1/list.php?i=list</p>
-      </div> */}
-      {/* <button onClick={handleAreas}>Areas</button> */}
+        <div className="random_meal">
+          {fetchedRandomMeal.map((meal) => {
+            return (
+              <div key={meal.idMeal}>
+                <h3>{meal.strMeal}</h3>
+                <img
+                  className="recipe_image"
+                  src={meal.strMealThumb}
+                  alt={meal.strMeal}
+                  onClick={() => handleIndividualMeal(meal.idMeal)}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };

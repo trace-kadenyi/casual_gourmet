@@ -43,19 +43,24 @@ const ByName = () => {
         />
         <button onClick={fetchByName}>Go</button>
 
-        {fetchedName.map((item) => {
-          return (
-            <div key={item.idMeal}>
-              <h3>{item.strMeal}</h3>
-              <img
-                className="recipe_image"
-                src={item.strMealThumb}
-                alt={item.strMeal}
-                onClick={() => handleIndividualMeal(item.idMeal)}
-              />
-            </div>
-          );
-        })}
+        {/* display meals if present in the database */}
+        {fetchedName ? (
+          fetchedName.map((item) => {
+            return (
+              <div key={item.idMeal}>
+                <h3>{item.strMeal}</h3>
+                <img
+                  className="recipe_image"
+                  src={item.strMealThumb}
+                  alt={item.strMeal}
+                  onClick={() => handleIndividualMeal(item.idMeal)}
+                />
+              </div>
+            );
+          })
+        ) : (
+          <h1>No Meals Found Yet...</h1>
+        )}
       </div>
     </section>
   );

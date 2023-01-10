@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Navbar from "../MealsNavigation/Navbar";
-
 
 const ByMainIngredient = () => {
   const [ingredient, setIngredient] = useState("");
@@ -26,15 +24,14 @@ const ByMainIngredient = () => {
       });
   };
 
-  // console.log(fetchedMainIngredient);
-
+  // handle individual meal
   const handleIndividualMeal = (id) => {
     navigate(`/meals_categories/:category/${id}`);
   };
 
   return (
     <section>
-       <Navbar type="meal_details" />
+      <Navbar type="meal_details" />
       <div>
         <h1>Search by Main Ingredient</h1>
         <input
@@ -45,19 +42,24 @@ const ByMainIngredient = () => {
         />
         <button onClick={fetchByMainIngredient}>Go</button>
 
-        {fetchedMainIngredient.map((item) => {
-          return (
-            <div key={item.idMeal}>
-              <h3>{item.strMeal}</h3>
-              <img
-                className="recipe_image"
-                src={item.strMealThumb}
-                alt={item.strMeal}
-                onClick={() => handleIndividualMeal(item.idMeal)}
-              />
-            </div>
-          );
-        })}
+        {/* display meals if present in the database */}
+        {fetchedMainIngredient ? (
+          fetchedMainIngredient.map((item) => {
+            return (
+              <div key={item.idMeal}>
+                <h3>{item.strMeal}</h3>
+                <img
+                  className="recipe_image"
+                  src={item.strMealThumb}
+                  alt={item.strMeal}
+                  onClick={() => handleIndividualMeal(item.idMeal)}
+                />
+              </div>
+            );
+          })
+        ) : (
+          <h1>No Meals Found Yet...</h1>
+        )}
       </div>
     </section>
   );
