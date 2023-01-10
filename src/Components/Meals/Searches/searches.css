@@ -1,0 +1,29 @@
+.search_div {
+  padding: 20px;
+}
+
+.input_go {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.search_input {
+  width: 90vw;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: #c73866 1px solid;
+}
+
+.go_btn {
+  background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search_head {
+  color: black;
+}
