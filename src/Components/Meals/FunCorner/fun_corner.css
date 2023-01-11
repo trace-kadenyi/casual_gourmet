@@ -64,6 +64,8 @@
   letter-spacing: 0.1rem;
   border-bottom: 1px black solid;
   text-align: center;
+  max-width: max-content;
+  margin: 0 auto;
 }
 
 .fun_intro_para {
