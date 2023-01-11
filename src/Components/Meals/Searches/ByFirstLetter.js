@@ -31,10 +31,10 @@ const ByFirstLetter = () => {
   };
 
   return (
-    <section>
+    <section className="search_sect">
       <Navbar type="meal_details" />
       <div className="search_div">
-        <h1>Search by First Letter</h1>
+        <h1 className="search_heading">Search By First Letter</h1>
         <div className="input_go">
           <input
             type="text"
@@ -69,7 +69,7 @@ const ByFirstLetter = () => {
               );
             })
           ) : (
-            <h1>No Meals Found Yet...</h1>
+            <h1 className="search_found">No Recipes Found. Please try another letter...</h1>
           )}{" "}
         </div>
       </div>

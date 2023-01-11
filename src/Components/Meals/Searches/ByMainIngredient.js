@@ -31,10 +31,10 @@ const ByMainIngredient = () => {
   };
 
   return (
-    <section>
+    <section className="search_sect">
       <Navbar type="meal_details" />
       <div className="search_div">
-        <h1>Search by Main Ingredient</h1>
+        <h1 className="search_heading">Search By Main Ingredient</h1>
         <div className="input_go">
           <input
             className="search_input"
@@ -69,7 +69,7 @@ const ByMainIngredient = () => {
               );
             })
           ) : (
-            <h1 className="search_found">No Meals Found Yet...</h1>
+            <h1 className="search_found">No Recipes Found. Please try another ingredient...</h1>
           )}
         </div>
       </div>

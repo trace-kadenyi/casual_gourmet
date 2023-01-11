@@ -32,10 +32,10 @@ const ByName = () => {
   };
 
   return (
-    <section>
+    <section className="search_sect">
       <Navbar type="meal_details" />
       <div className="search_div">
-        <h1>Search by Name</h1>
+        <h1 className="search_heading">Search By Name</h1>
         <div className="input_go">
           <input
             type="text"
@@ -70,7 +70,7 @@ const ByName = () => {
               );
             })
           ) : (
-            <h1>No Meals Found Yet...</h1>
+            <h1 className="search_found">No Recipes Found. Please try another name...</h1>
           )}{" "}
         </div>
       </div>

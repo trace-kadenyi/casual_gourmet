@@ -39,14 +39,14 @@ const MealsPerArea = () => {
   };
 
   return (
-    <section>
+    <section className="search_sect">
       <Navbar type="meal_details" />
       <div className="individual_area">
         {loading ? (
           <h1>Loading</h1>
         ) : (
           <div>
-            <h1>{area}</h1>
+            <h1 className="search_heading">{area} Recipes</h1>
 
             <div className="one_cat">
               {fetchedArea.status === 200 ? (
@@ -66,7 +66,7 @@ const MealsPerArea = () => {
                   </div>
                 ))
               ) : (
-                <h1>Loading...</h1>
+                <h1 className="search_found">Loading...</h1>
               )}
             </div>
           </div>
