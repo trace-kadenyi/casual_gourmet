@@ -48,17 +48,21 @@ const MealsPerArea = () => {
           <div>
             <h1>{area}</h1>
 
-            <div>
+            <div className="one_cat">
               {fetchedArea.status === 200 ? (
                 fetchedArea.data.meals.map((meal, index) => (
-                  <div key={index}>
+                  <div key={index} className="individual_items">
                     <img
-                      className="meal_img"
+                      className="recipe_image"
                       src={meal.strMealThumb}
                       alt={meal.strMeal}
                       onClick={() => handleMealDetails(meal.idMeal)}
                     />
-                    <h3>{meal.strMeal}</h3>
+                    <h3 className="meal_title search_head">
+                       {meal.strMeal.length > 20
+                        ? `${meal.strMeal.slice(0, 20)}...`
+                        : meal.strMeal}
+                    </h3>
                   </div>
                 ))
               ) : (

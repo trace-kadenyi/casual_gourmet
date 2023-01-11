@@ -60,7 +60,11 @@ const ByMainIngredient = () => {
                     alt={item.strMeal}
                     onClick={() => handleIndividualMeal(item.idMeal)}
                   />
-                  <h3 className="meal_title search_head">{item.strMeal}</h3>
+                  <h3 className="meal_title search_head">
+                    {item.strMeal.length > 20
+                      ? `${item.strMeal.slice(0, 20)}...`
+                      : item.strMeal}
+                  </h3>
                 </div>
               );
             })
