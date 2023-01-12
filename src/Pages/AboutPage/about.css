@@ -51,6 +51,7 @@
   cursor: pointer;
   color: #fff;
   text-align: center;
+  font-style: italic;
 }
 
 .about_nav li:hover {
