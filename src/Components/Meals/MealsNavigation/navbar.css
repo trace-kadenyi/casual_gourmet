@@ -27,6 +27,11 @@
   color: #fff;
 }
 
+.nav_list li:hover {
+  background: #000;
+  border: 1px solid #c73866;
+}
+
 @media screen and (max-width: 768px) {
   .nav_list,
   .header {
