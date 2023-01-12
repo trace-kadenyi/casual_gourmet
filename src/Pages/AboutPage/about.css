@@ -1,14 +1,15 @@
 .about_page {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
   overflow-y: hidden;
   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(179, 52, 52, 0.7)),
     url("../../assets/about.jpg");
-     /* background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(24, 23, 23, 0.7)), 
+  /* background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(24, 23, 23, 0.7)), 
     url("../../assets/about.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  overflow: hidden;
 }
 
 .logo {
@@ -38,7 +39,7 @@
 
 .about_nav li {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   padding: 20px;
   letter-spacing: 0.2rem;
@@ -49,18 +50,18 @@
   background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
   cursor: pointer;
   color: #fff;
+  text-align: center;
+}
+
+.about_nav li:hover {
+  background: #000;
+  border: #c73866 1px solid;
 }
 
 .about_content {
   text-align: center;
   margin: 60px auto 0;
   width: 70%;
-}
-
-.about_content h1 {
-  font-weight: 500;
-  font-size: 60px;
-  letter-spacing: 0.4rem;
 }
 
 .about_content p {
@@ -83,4 +84,63 @@
   letter-spacing: 0.2rem;
   font-size: 1.1rem;
   font-style: italic;
+}
+
+@media screen and (max-width: 900px) {
+  .about_nav li {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .about_nav li {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about_nav ul {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .about_header {
+    margin: 20px;
+  }
+
+  .about_content p {
+    font-size: 12px;
+  }
+
+  .span {
+    font-size: 1rem;
+  }
+
+  .panic {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about_nav li {
+    font-size: 0.6rem;
+  }
+
+  .about_content {
+    margin-top: 100px;
+  }
+
+  .about_nav ul {
+    position: absolute;
+    left: 10px;
+  }
 }
