@@ -34,6 +34,15 @@
   text-align: center;
 }
 
+.title_head {
+  text-decoration: overline;
+  text-align: center;
+  color: #c73866;
+  font-weight: 900;
+  font-style: italic;
+  margin: 50px auto;
+}
+
 .meal_title {
   color: white;
   font-style: italic;

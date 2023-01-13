@@ -59,7 +59,7 @@ const Category = () => {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <h1>{foundCategory.strCategory} Recipes</h1>
+          <h1 className="title_head">{foundCategory.strCategory} Recipes</h1>
           <div>
             <div className="one_cat">
               {fetchedCategory.status === 200 ? (
