@@ -3,7 +3,7 @@
   max-width: 100vw;
   overflow-y: hidden;
   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(179, 52, 52, 0.7)),
-    url("../../assets/about.jpg");
+    url("../../assets/landing&about/about.jpg");
   /* background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(24, 23, 23, 0.7)), 
     url("../../assets/about.jpg"); */
   background-repeat: no-repeat;
