@@ -17,10 +17,11 @@
   min-height: 100vh;
   max-width: 100vw;
   overflow-x: hidden;
-    background: linear-gradient(rgba(48, 36, 36, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(48, 36, 36, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/categories.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   color: #fff;
 }
 
@@ -38,10 +39,9 @@
 }
 
 .categories_intro_para span {
-  /* color: #c73866;
-  font-weight: bold; */
   text-decoration: underline;
 }
+
 .categories_div {
   display: flex;
   flex-wrap: wrap;

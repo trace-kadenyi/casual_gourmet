@@ -1,6 +1,16 @@
 .individual_category {
   overflow: hidden;
+  min-height: 100vh;
 }
+
+.individual_category h3 {
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
 .one_cat {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -57,25 +67,25 @@
 }
 
 .beef_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/beef.jpg");
   background-position: center center;
 }
 
 .vegetarian_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/vegetarian.jpg");
   background-position: center center;
 }
 
 .chicken_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/chicken.jpg");
   background-position: center center;
 }
 
 .pork_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/pork.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -83,18 +93,17 @@
 }
 
 .goat_cat {
-  height: 100vh;
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  /* height: 100vh; */
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/goat.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
 .breakfast_cat {
-  height: 100vh;
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  /* height: 100vh; */
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/breakfast.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -102,7 +111,7 @@
 }
 
 .seafood_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/seafood.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -110,7 +119,7 @@
 }
 
 .side_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/side.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -118,43 +127,42 @@
 }
 
 .starter_cat {
-  height: 100vh;
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  /* height: 100vh; */
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/starter.jpg");
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
 .lamb_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/lamb.webp");
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
 .miscellaneous_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/miscellaneous.jpg");
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
-
 .pasta_cat {
-   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/category/pasta.jpg");
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
 .vegan_cat {
-  height: 100vh;
+  /* height: 100vh; */
   overflow-y: hidden;
-   background: linear-gradient(rgba(71, 68, 68, 0.7), rgba(77, 26, 26, 0.7)),
+  background: linear-gradient(rgba(71, 68, 68, 0.7), rgba(77, 26, 26, 0.7)),
     url("../../../assets/category/vegan.jpg");
   background-position: center center;
   background-repeat: no-repeat;

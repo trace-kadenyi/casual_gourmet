@@ -91,7 +91,7 @@ const Category = () => {
                   </div>
                 ))
               ) : (
-                <h1>Loading...</h1>
+                <h1 className="search_found">Loading...</h1>
               )}
             </div>
           </div>

@@ -3,6 +3,7 @@
     url("../../../assets/category/dessert.jpg");
   background-position: center center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .search_div {
