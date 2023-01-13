@@ -28,6 +28,7 @@
   display: flex;
   justify-content: space-between;
   margin: 30px 20px;
+  height: 90px;
 }
 
 .about_nav ul {
@@ -44,7 +45,7 @@
   padding: 20px;
   letter-spacing: 0.2rem;
   font-weight: bold;
-  border: none;
+  border: 2px solid #c73866;
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
   background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);

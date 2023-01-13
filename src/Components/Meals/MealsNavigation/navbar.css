@@ -3,23 +3,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px red solid; */
+  height: 80px;
+  width: 100%;
 }
 
 .nav_list {
   list-style-type: none;
   display: flex;
   gap: 15px;
+  padding: 20px;
+  margin: 0 20px;
 }
 
 .nav_list li {
-   text-decoration: none;
+  text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
   padding: 15px;
   letter-spacing: 0.2rem;
   font-weight: bold;
-  border: none;
+  border: 2px solid #c73866;
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
   background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
@@ -38,4 +41,3 @@
     flex-direction: column;
   }
 }
-  
