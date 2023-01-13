@@ -29,6 +29,7 @@
   text-decoration: overline;
   text-align: center;
   color: #c73866;
+  margin-top: 80px;
 }
 
 .categories_intro_para {
@@ -137,6 +138,12 @@
 
 .category_div:hover > .arrow {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .categories_head {
+    margin-top: 150px;
+  }
 }
 
 @media screen and (max-width: 360px) {

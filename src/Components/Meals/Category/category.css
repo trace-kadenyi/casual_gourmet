@@ -50,7 +50,7 @@
   color: #c73866;
   font-weight: 900;
   font-style: italic;
-  margin: 50px auto;
+  margin: 80px auto 50px;
 }
 
 .meal_title {
@@ -167,4 +167,10 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .title_head {
+    margin-top: 150px;
+  }
 }

@@ -45,7 +45,7 @@
   border-top: 3px solid white;
   border-bottom: 3px solid white;
   width: max-content;
-  margin: 50px auto;
+  margin: 80px auto;
   font-style: italic;
 }
 
@@ -56,3 +56,12 @@
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .search_heading {
+    margin-top: 150px;
+    font-size: 1rem;
+  }
+}
+  
+
