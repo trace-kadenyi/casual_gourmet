@@ -51,32 +51,32 @@
 
 .dessert_cat {
   background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/dessert.jpg");
+    url("../../../assets/category/dessert.jpg");
   background-position: center center;
   background-blend-mode: color;
 }
 
 .beef_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/beef.jpg");
+    url("../../../assets/category/beef.jpg");
   background-position: center center;
 }
 
 .vegetarian_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/vegetarian.jpg");
+    url("../../../assets/category/vegetarian.jpg");
   background-position: center center;
 }
 
 .chicken_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/chicken.jpg");
+    url("../../../assets/category/chicken.jpg");
   background-position: center center;
 }
 
 .pork_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/pork.jpg");
+    url("../../../assets/category/pork.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,7 +85,7 @@
 .goat_cat {
   height: 100vh;
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/goat.jpg");
+    url("../../../assets/category/goat.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,7 +95,7 @@
 .breakfast_cat {
   height: 100vh;
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/breakfast.jpg");
+    url("../../../assets/category/breakfast.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,7 +103,7 @@
 
 .seafood_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/seafood.jpg");
+    url("../../../assets/category/seafood.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -111,7 +111,7 @@
 
 .side_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/side.jpg");
+    url("../../../assets/category/side.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,7 +120,7 @@
 .starter_cat {
   height: 100vh;
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/starter.jpg");
+    url("../../../assets/category/starter.jpg");
     background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -128,7 +128,7 @@
 
 .lamb_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/lamb.webp");
+    url("../../../assets/category/lamb.webp");
     background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -136,7 +136,7 @@
 
 .miscellaneous_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/miscellaneous.jpg");
+    url("../../../assets/category/miscellaneous.jpg");
     background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -145,7 +145,7 @@
 
 .pasta_cat {
    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
-    url("../../../assets/pasta.jpg");
+    url("../../../assets/category/pasta.jpg");
     background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -155,7 +155,7 @@
   height: 100vh;
   overflow-y: hidden;
    background: linear-gradient(rgba(71, 68, 68, 0.7), rgba(77, 26, 26, 0.7)),
-    url("../../../assets/vegan.jpg");
+    url("../../../assets/category/vegan.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

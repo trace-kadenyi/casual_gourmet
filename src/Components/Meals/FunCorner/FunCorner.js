@@ -82,7 +82,8 @@ const FunCorner = () => {
           Cooking can be a fun venture if you want it to be. <br /> On this
           page, you can search for various meal recipes based on the origin,
           name or main ingredient. <br /> You can even take it further and
-          choose what to cook based on the first letter that pops in your mind! <br /> So...
+          choose what to cook based on the first letter that pops in your mind!{" "}
+          <br /> So...
           <br /> Get your apron...
           <br /> Raid your kitchen cabinets to see what ingredients you already
           have...
@@ -141,10 +142,11 @@ const FunCorner = () => {
               Want to be even more adventurous? Click the random button to get a
               random meal recipe.
             </p>
-            <button onClick={handleRandomMeal} className="random_btn">
-              Random
-            </button>
-
+            <div className="random_button_div">
+              <button onClick={handleRandomMeal} className="random_btn">
+                Random
+              </button>
+            </div>
             <div className="random_meal">
               {fetchedRandomMeal.map((meal) => {
                 return (
