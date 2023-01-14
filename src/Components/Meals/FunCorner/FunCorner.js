@@ -123,7 +123,6 @@ const FunCorner = () => {
                 <input
                   type="text"
                   placeholder="Input Origin/Country"
-                  autoFocus
                   required
                   className="fun_input"
                   value={country}
