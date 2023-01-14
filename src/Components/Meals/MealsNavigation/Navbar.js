@@ -23,21 +23,33 @@ const Navbar = ({ type }) => {
     navigate("/meals_categories");
   };
 
+  // toggle menu
+
+  const handleToggle = () => {
+    const toggle = document.getElementById("toggle");
+    const toggler = document.getElementById("header_first_div");
+    toggle.classList.toggle("active");
+    toggler.classList.toggle("active");
+  };
+
   return (
     <header className="header">
-      <img className="logo" src={logo} alt="logo" onClick={handleHome} />
-      <nav>
-        <ul className="nav_list">
-          <li onClick={handleHome}>Home</li>
-          <li onClick={handleAbout}>About</li>
-          {type === "category" ||
-          type === "meal_details" ||
-          type === "fun_corner" ? (
-            <li onClick={handleCategories}>Categories</li>
-          ) : null}
-          <li onClick={handleFunCorner}>Fun Corner</li>
-        </ul>
-      </nav>
+      <div id="header_first_div">
+        <img className="logo" src={logo} alt="logo" onClick={handleHome} />
+        <nav>
+          <ul className="nav_list">
+            <li onClick={handleHome}>Home</li>
+            <li onClick={handleAbout}>About</li>
+            {type === "category" ||
+            type === "meal_details" ||
+            type === "fun_corner" ? (
+              <li onClick={handleCategories}>Categories</li>
+            ) : null}
+            <li onClick={handleFunCorner}>Fun Corner</li>
+          </ul>
+        </nav>
+      </div>
+      <div id="toggle" onClick={handleToggle}></div>
     </header>
   );
 };

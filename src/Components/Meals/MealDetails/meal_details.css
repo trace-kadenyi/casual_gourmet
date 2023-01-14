@@ -49,6 +49,10 @@
   font-size: 1.5rem;
 }
 
+.meal_name {
+  margin-top: 80px;
+}
+
 .fun_facts > * {
   text-align: center;
 }
@@ -94,5 +98,11 @@
   }
   .meal_image {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .meal_name {
+    margin-top: 150px;
   }
 }

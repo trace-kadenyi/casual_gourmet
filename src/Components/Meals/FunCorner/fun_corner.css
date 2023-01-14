@@ -29,6 +29,7 @@
   border: 1px #c73866 solid;
   border-radius: 10px;
   background: #c73866;
+  height: 35px;
 }
 
 .main_ingredient_btn,
@@ -65,7 +66,7 @@
   border-bottom: 1px black solid;
   text-align: center;
   max-width: max-content;
-  margin: 0 auto;
+  margin: 50px auto 0;
 }
 
 .fun_intro_para {
@@ -113,7 +114,7 @@
   padding-bottom: 20px;
   border-radius: 20px;
   background: linear-gradient(rgba(95, 37, 37, 0.7), rgba(70, 62, 62, 0.7)),
-    url("../../../assets/random.jpg");
+    url("../../../assets/funcorner/random.jpg");
 }
 
 .search_bys h3 {
@@ -136,7 +137,11 @@
   border: none;
   padding-bottom: 20px;
   background: linear-gradient(rgba(133, 47, 47, 0.7), rgba(48, 42, 42, 0.7)),
-    url("../../../assets/search_by.jpg");
+    url("../../../assets/funcorner/search_by.jpg");
+}
+
+.random_button_div {
+  height: 40px;
 }
 
 .random_btn {
@@ -201,6 +206,10 @@
   .random_title {
     font-size: 1rem;
     text-align: center;
+  }
+
+  .fun_intro {
+    margin-top: 100px;
   }
 }
 

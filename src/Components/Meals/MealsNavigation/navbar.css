@@ -1,25 +1,27 @@
-.header {
+#header_first_div {
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px red solid; */
+  height: 80px;
 }
 
 .nav_list {
   list-style-type: none;
   display: flex;
   gap: 15px;
+  padding: 20px;
+  margin: 0 20px;
 }
 
 .nav_list li {
-   text-decoration: none;
+  text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
   padding: 15px;
   letter-spacing: 0.2rem;
   font-weight: bold;
-  border: none;
+  border: 2px solid #c73866;
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
   background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
@@ -27,10 +29,101 @@
   color: #fff;
 }
 
+.nav_list li:hover {
+  background: #000;
+}
+
+#toggle {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
-  .nav_list,
-  .header {
+  #toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: #c73866;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    z-index: 1;
+    position: fixed;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  #toggle::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-5px);
+    transition: 0.2s;
+  }
+
+  #toggle::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(5px);
+    transition: 0.2s;
+  }
+
+  #toggle.active {
+    background: none;
+  }
+
+  #toggle.active::before {
+    transform: rotate(45deg) translateY(0);
+  }
+
+  #toggle.active::after {
+    transform: rotate(-45deg) translateY(0);
+  }
+
+  #header_first_div {
+    display: none;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  #header_first_div.active {
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+      url("../../../assets/category/dessert.jpg");
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    gap: 20px;
+    transition: 0.05s;
+    animation: slide 0.5s ease-in;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
   }
 }
-  
