@@ -76,7 +76,7 @@ const FunCorner = () => {
       <Navbar type="fun_corner" />
       <div className="fun_corner_div">
         <h3 className="fun_intro">
-          Spice up your cooking experience in this little fun corner{" "}
+          Spice up your cooking experience in this little corner{" "}
         </h3>
         <p className="fun_intro_para">
           Cooking can be a fun venture if you want it to be. <br /> On this

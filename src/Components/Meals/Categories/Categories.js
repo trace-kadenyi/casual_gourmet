@@ -66,7 +66,7 @@ const Categories = () => {
       {/* <button onClick={handleAreas}>Areas</button> */}
       <h1 className="categories_head">Categories</h1>
       <p className="categories_intro_para">
-        Food is ubiquitous because not only is it a necessity but also one of <span>life's greatest pleasures </span> . This page contains some of the most popular categories of food. Click on any category to view multiple recipes that could liven up your cooking experience. 
+        Food is one of <span>life's greatest pleasures</span>. This page contains some of the most popular categories of food. Click on any category to view multiple recipes that could liven up your cooking experience. 
       </p>
       <div className="categories_div">
         {loading ? (
