@@ -13,6 +13,8 @@ import FunCorner from "./Components/Meals/FunCorner/FunCorner";
 import ByMainIngredient from "./Components/Meals/Searches/ByMainIngredient";
 import ByFirstLetter from "./Components/Meals/Searches/ByFirstLetter";
 import ByName from "./Components/Meals/Searches/ByName";
+// Drinks
+import DrinksCategories from "./Components/Drinks/DrinksCategories/DrinksCategories";
 
 const App = () => {
   return (
@@ -34,6 +36,8 @@ const App = () => {
         <Route path="/main_ingredient" element={<ByMainIngredient />} />
         <Route path="/first_letter" element={<ByFirstLetter />} />
         <Route path="/name" element={<ByName />} />
+        {/* Drinks */}
+        <Route path="/drinks_categories" element={<DrinksCategories />} />
       </Routes>
     </Router>
   );
