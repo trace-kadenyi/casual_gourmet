@@ -16,19 +16,24 @@ const categoriesSlice = createSlice({
   initialState: {
     categories: [],
     loading: false,
+    fulfilled: false,
   },
   extraReducers: {
     [fetchCategories.pending]: (state, action) => {
       state.loading = true;
+      state.fulfilled = false;
     },
     [fetchCategories.fulfilled]: (state, action) => {
       state.loading = false;
       state.categories = action.payload;
+      state.fulfilled = true;
     },
     [fetchCategories.rejected]: (state, action) => {
       state.loading = false;
+      state.fulfilled = false;
     },
   },
 });
 
+export const fulfilledSelector = (state) => state.categories.fulfilled;
 export default categoriesSlice.reducer;

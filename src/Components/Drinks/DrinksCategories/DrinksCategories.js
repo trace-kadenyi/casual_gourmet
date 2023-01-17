@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { fetchCategories } from "../../../Redux/Drinks/categoriesSlice";
+import { fetchCategories } from "../../../Redux/Drinks/drinkscategoriesSlice";
 import "./drinks_categories.css";
 
 const DrinksCategories = () => {

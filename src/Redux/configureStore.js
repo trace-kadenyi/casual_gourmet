@@ -4,7 +4,7 @@ import categoryReducer from "./Meals/individual_category_slice";
 import cocktailsReducer from "./Drinks/cocktailslice";
 import regularDrinksReducer from "./Drinks/regularDrinksSlice";
 import areasReducer from "./Meals/areaslice";
-import drinksCategoryReducer from "./Drinks/categoriesSlice";
+import drinksCategoryReducer from "./Drinks/drinkscategoriesSlice";
 import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({
