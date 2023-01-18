@@ -19,6 +19,7 @@ import DrinksCategory from "./Components/Drinks/DrinksCategory/DrinksCategory";
 import CoffeeTea from "./Components/Drinks/DrinksCategory/CoffeeTea";
 import Other from "./Components/Drinks/DrinksCategory/Other";
 import PunchPartyCategory from "./Components/Drinks/DrinksCategory/PunchPartyCategory";
+import DrinksDetails from "./Components/Drinks/DrinksDetails/DrinksDetails";
 
 const App = () => {
   return (
@@ -51,6 +52,10 @@ const App = () => {
         <Route
           path="/drinks_categories/Punch / Party Drink"
           element={<PunchPartyCategory />}
+        />
+        <Route
+          path="/drinks_categories/:category/:id"
+          element={<DrinksDetails />}
         />
       </Routes>
     </Router>
