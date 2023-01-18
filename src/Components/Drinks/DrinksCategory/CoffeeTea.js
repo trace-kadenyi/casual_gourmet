@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const CoffeeTea = () => {
   const [fetchedCategory, setFetchedCategory] = useState([]);
+  const navigate = useNavigate();
+
   const { categories, loading } = useSelector(
     (state) => state.drinksCategories
   );
@@ -45,6 +48,12 @@ const CoffeeTea = () => {
                     src={drink.strDrinkThumb}
                     alt={drink.strDrink}
                     className="drink_img"
+                    // navigate to drink details page
+                    onClick={() => {
+                      navigate(
+                        `/drinks_categories/Coffee_Tea/${drink.idDrink}`
+                      );
+                    }}
                   />
                   <h3 className="drink_cat_name">{drink.strDrink}</h3>
                 </div>
