@@ -1,18 +1,18 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list';
+const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
 
 export const fetchCategories = createAsyncThunk(
-  'categories/fetchCategories',
+  "categories/fetchCategories",
   async () => {
     const response = await axios.get(BASE_URL);
     return response.data.drinks;
   }
-)
+);
 
 const categoriesSlice = createSlice({
-  name: 'categories',
+  name: "categories",
   initialState: {
     categories: [],
     loading: false,
@@ -36,8 +36,11 @@ const categoriesSlice = createSlice({
 });
 
 export const drinksCategoriesSelector = (state) => state.categories;
-export const drinksCategoriesLoadingSelector = (state) => state.categories.loading;
-export const drinksCategoriesFulfilledSelector = (state) => state.categories.fulfilled;
-export const drinksCategoriesHasErrorsSelector = (state) => state.categories.hasErrors;
+export const drinksCategoriesLoadingSelector = (state) =>
+  state.categories.loading;
+export const drinksCategoriesFulfilledSelector = (state) =>
+  state.categories.fulfilled;
+export const drinksCategoriesHasErrorsSelector = (state) =>
+  state.categories.hasErrors;
 
 export default categoriesSlice.reducer;
