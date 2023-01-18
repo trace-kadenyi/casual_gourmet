@@ -7,6 +7,7 @@ import "./drinks_category.css";
 
 const DrinksCategory = () => {
   const [fetchedCategory, setFetchedCategory] = useState([]);
+  const navigate = useNavigate();
   const { categories, loading } = useSelector(
     (state) => state.drinksCategories
   );
@@ -37,9 +38,9 @@ const DrinksCategory = () => {
   }, []);
 
   // navigate to drinks details page
-  // const navigateToDrinksDetails = (id) => {
-  //   navigate(`/drinks_categories/${category}/${id}`);
-  // };
+  const navigateToDrinksDetails = (id) => {
+    navigate(`/drinks_categories/${category}/${id}`);
+  };
 
   // assign specific class to each category
 
@@ -64,6 +65,7 @@ const DrinksCategory = () => {
                     src={drink.strDrinkThumb}
                     alt={drink.strDrink}
                     className="drink_img"
+                    onClick={() => navigateToDrinksDetails(drink.idDrink)}
                   />
                   <h3 className="drink_cat_name">{drink.strDrink}</h3>
                 </div>
