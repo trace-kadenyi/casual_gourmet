@@ -15,6 +15,10 @@ import ByFirstLetter from "./Components/Meals/Searches/ByFirstLetter";
 import ByName from "./Components/Meals/Searches/ByName";
 // Drinks
 import DrinksCategories from "./Components/Drinks/DrinksCategories/DrinksCategories";
+import DrinksCategory from "./Components/Drinks/DrinksCategory/DrinksCategory";
+import CoffeeTea from "./Components/Drinks/DrinksCategory/CoffeeTea";
+import Other from "./Components/Drinks/DrinksCategory/Other";
+import PunchPartyCategory from "./Components/Drinks/DrinksCategory/PunchPartyCategory";
 
 const App = () => {
   return (
@@ -38,6 +42,16 @@ const App = () => {
         <Route path="/name" element={<ByName />} />
         {/* Drinks */}
         <Route path="/drinks_categories" element={<DrinksCategories />} />
+        <Route
+          path="/drinks_categories/:category"
+          element={<DrinksCategory />}
+        />
+        <Route path="/drinks_categories/Coffee / Tea" element={<CoffeeTea />} />
+        <Route path="/drinks_categories/Other / Unknown" element={<Other />} />
+        <Route
+          path="/drinks_categories/Punch / Party Drink"
+          element={<PunchPartyCategory />}
+        />
       </Routes>
     </Router>
   );
