@@ -34,7 +34,9 @@ const DrinksCategories = () => {
                 className={`drinks_categories_btn ${assignClass(
                   category.strCategory
                 )}`}
-                onClick={() => navigate(`/drinks/${category.strCategory}`)}
+                onClick={() =>
+                  navigate(`/drinks_categories/${category.strCategory}`)
+                }
               >
                 {category.strCategory}
               </button>
