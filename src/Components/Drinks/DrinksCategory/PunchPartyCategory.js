@@ -3,6 +3,8 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
+import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
+
 const PunchPartyCategory = () => {
   const [fetchedCategory, setFetchedCategory] = useState([]);
   const navigate = useNavigate();
@@ -34,6 +36,7 @@ const PunchPartyCategory = () => {
 
   return (
     <div className="drinks_category">
+       <DrinksNavigation type="category"/>
       {loading ? (
         <h1>Loading...</h1>
       ) : (

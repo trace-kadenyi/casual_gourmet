@@ -3,6 +3,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 
+import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
 import "./drinks_details.css";
 
 const DrinksDetails = () => {
@@ -57,6 +58,7 @@ const DrinksDetails = () => {
 
   return (
     <div>
+      <DrinksNavigation type="category" />
       {loading ? (
         <h1>Loading</h1>
       ) : (
@@ -92,7 +94,7 @@ const DrinksDetails = () => {
                   {/* display ingredients */}
                   <div className="ingredients_div">
                     <h2 className="ingredients_heading">Ingredients</h2>
-                    <div className="ingredients_ul">
+                    <div className="columns is-multiline">
                       {handleIngredients().map((ingredient, index) => (
                         <div key={index} className="column is-half">
                           <div className="card ingredient_card">

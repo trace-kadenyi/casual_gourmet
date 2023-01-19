@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { fetchCategories } from "../../../Redux/Drinks/drinkscategoriesSlice";
+import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
 import "./drinks_categories.css";
 
 const DrinksCategories = () => {
@@ -23,6 +24,7 @@ const DrinksCategories = () => {
 
   return (
     <div className="drinks_categories_sect">
+      <DrinksNavigation type="Categories" />
       <h1 className="categories_head">Drinks Categories</h1>
       <div className="drinks_categories_mainDiv">
         {loading ? (

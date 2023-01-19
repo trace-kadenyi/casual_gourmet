@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
+import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
 import "./drinks_category.css";
 
 const DrinksCategory = () => {
@@ -52,6 +53,7 @@ const DrinksCategory = () => {
     <div
       className={`drinks_category ${assignClass(foundCategory.strCategory)}`}
     >
+      <DrinksNavigation type="category"/>
       {loading ? (
         <h1>Loading...</h1>
       ) : (
