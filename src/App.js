@@ -20,6 +20,12 @@ import CoffeeTea from "./Components/Drinks/DrinksCategory/CoffeeTea";
 import Other from "./Components/Drinks/DrinksCategory/Other";
 import PunchPartyCategory from "./Components/Drinks/DrinksCategory/PunchPartyCategory";
 import DrinksDetails from "./Components/Drinks/DrinksDetails/DrinksDetails";
+import DrinksFunCorner from "./Components/Drinks/DrinksFunCorner/DrinksFunCorner";
+import MainIngredient from "./Components/Drinks/DrinksSearches/ByMainIngredient";
+import FirstLetter from "./Components/Drinks/DrinksSearches/FirstLetter";
+import Name from "./Components/Drinks/DrinksSearches/Name";
+import Glass from "./Components/Drinks/DrinksSearches/Glass";
+import ByAlcohol from "./Components/Drinks/DrinksSearches/ByAlcohol";
 
 const App = () => {
   return (
@@ -57,6 +63,12 @@ const App = () => {
           path="/drinks_categories/:category/:id"
           element={<DrinksDetails />}
         />
+        <Route path="/drinks_fun_corner" element={<DrinksFunCorner />} />
+        <Route path="/drinks_main_ingredient" element={<MainIngredient />} />
+        <Route path="/drinks_first_letter" element={<FirstLetter />} />
+        <Route path="/drinks_name" element={<Name />} />
+        <Route path="drinks_glass" element={<Glass />} />
+        <Route path="drinks_alcoholic" element={<ByAlcohol />} />
       </Routes>
     </Router>
   );
