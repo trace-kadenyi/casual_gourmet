@@ -15,7 +15,7 @@ const About = () => {
   };
 
   const handleDrinks = () => {
-    navigate("/drinks");
+    navigate("/drinks_categories");
   };
 
   return (

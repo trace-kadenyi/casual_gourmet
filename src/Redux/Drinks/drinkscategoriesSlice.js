@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const BASE_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
+const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
 
 export const fetchCategories = createAsyncThunk(
   "categories/fetchCategories",
   async () => {
     const response = await axios.get(BASE_URL);
-    return response.data.categories;
+    return response.data.drinks;
   }
 );
 
@@ -17,23 +17,30 @@ const categoriesSlice = createSlice({
     categories: [],
     loading: false,
     fulfilled: false,
+    hasErrors: false,
   },
   extraReducers: {
     [fetchCategories.pending]: (state, action) => {
       state.loading = true;
-      state.fulfilled = false;
     },
     [fetchCategories.fulfilled]: (state, action) => {
       state.loading = false;
-      state.categories = action.payload;
       state.fulfilled = true;
+      state.categories = action.payload;
     },
     [fetchCategories.rejected]: (state, action) => {
       state.loading = false;
-      state.fulfilled = false;
+      state.hasErrors = true;
     },
   },
 });
 
-export const fulfilledSelector = (state) => state.categories.fulfilled;
+export const drinksCategoriesSelector = (state) => state.categories;
+export const drinksCategoriesLoadingSelector = (state) =>
+  state.categories.loading;
+export const drinksCategoriesFulfilledSelector = (state) =>
+  state.categories.fulfilled;
+export const drinksCategoriesHasErrorsSelector = (state) =>
+  state.categories.hasErrors;
+
 export default categoriesSlice.reducer;
