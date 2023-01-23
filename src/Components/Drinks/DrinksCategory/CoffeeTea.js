@@ -52,7 +52,7 @@ const CoffeeTea = () => {
                     <img
                       src={drink.strDrinkThumb}
                       alt={drink.strDrink}
-                      className="recipe_image"
+                      className="recipe_image drinks_image"
                       // navigate to drink details page
                       onClick={() => {
                         navigate(
