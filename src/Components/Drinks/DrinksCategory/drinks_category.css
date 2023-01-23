@@ -5,3 +5,48 @@
 /* .drink_cat_name {
   color: black;
 } */
+
+.coffee_tea_cat {
+  background: red;
+}
+
+.shot_cat {
+  background: blue;
+}
+
+.ordinary_drink_cat {
+  /* background: linear-gradient(rgba(77, 29, 29, 0.7), rgba(27, 26, 26, 0.7)),
+    url("../../../assets/drinks/6.jpg"); */
+}
+
+.other_unknown_cat {
+  background: yellow;
+}
+
+.cocktail_cat {
+  /* background: orange; */
+}
+
+.shake_cat {
+  background: purple;
+}
+
+.punch_party_cat {
+  background: pink;
+}
+
+.homemade_liqueur_cat {
+  background: brown;
+}
+
+.cocoa_cat {
+  background: grey;
+}
+
+.beer_cat {
+  background: black;
+}
+
+.soft_drink_cat {
+  background: green;
+}

@@ -2,7 +2,9 @@
   min-height: 100vh;
   max-width: 100vw;
   overflow-x: hidden;
-  background: url("../../../assets/amisha-nakhwa-acuJp9LSCfM-unsplash.jpg");
+  background: linear-gradient(rgba(77, 29, 29, 0.7), rgba(27, 26, 26, 0.7)),
+    url("../../../assets/drinks/6.jpg");
+    /* background:  url("../../../assets/drinks/10.jpg");; */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
