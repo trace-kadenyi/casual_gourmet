@@ -16,7 +16,7 @@
 
 .nav_list li {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   padding: 15px;
   letter-spacing: 0.2rem;
@@ -31,8 +31,7 @@
 
 .nav_list li:hover {
   background: #000;
-    border: 2px solid #c73866;
-
+  border: 2px solid #c73866;
 }
 
 #toggle {

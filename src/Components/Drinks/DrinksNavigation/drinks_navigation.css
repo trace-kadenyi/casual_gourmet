@@ -1,0 +1,8 @@
+.drinks_nav_list li {
+  background: black;
+  border: 2px solid #c73866;
+}
+
+.drinks_nav_list li:hover {
+  background: #c73866;
+}
