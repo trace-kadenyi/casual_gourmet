@@ -2,10 +2,6 @@
   width: 200px;
 }
 
-/* .drink_cat_name {
-  color: black;
-} */
-
 .coffee_tea_cat {
   background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
     url("../../../assets/drinks/coffee_tea.jpg");
@@ -43,13 +39,16 @@
 }
 
 .punch_party_cat {
-  background: pink;
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/punch.jpg");
+  background-position: center center;
 }
 
 .homemade_liqueur_cat {
-background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
     url("../../../assets/drinks/h1.jpg");
-  background-position: center right;}
+  background-position: center right;
+}
 
 .cocoa_cat {
   background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
@@ -65,11 +64,12 @@ background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
 }
 
 .soft_drink_cat {
-  background: green;
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/so1.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 
 .drinks_image {
-  /* height: 250px; */
-  /* width: 200px; */
-  /* height: auto; */
+  height: 250px;
 }

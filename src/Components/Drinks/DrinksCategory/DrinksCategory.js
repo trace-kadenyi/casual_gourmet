@@ -69,7 +69,7 @@ const DrinksCategory = () => {
                 <div key={index} className="individual_items">
                   <img
                     id={drink.idDrink}
-                    className="recipe_image"
+                    className="recipe_image drinks_image"
                     src={drink.strDrinkThumb}
                     alt={drink.strDrink}
                     onClick={(e) => navigateToDrinksDetails(drink.idDrink)}
