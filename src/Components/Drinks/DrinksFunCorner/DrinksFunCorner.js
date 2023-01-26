@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
 
 const DrinksFunCorner = () => {
+  const [fetchedRandomDrink, setFetchedRandomDrink] = useState([]);
   const navigate = useNavigate();
 
 
@@ -31,6 +32,27 @@ const DrinksFunCorner = () => {
   // handle search by alcoholic
   const handleAlcoholic = () => {
     navigate("/drinks_alcoholic");
+  };
+
+  // handle search by random drink
+
+  let randomDrink;
+
+  const handleRandomDrink = async () => {
+    await axios
+      .get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+      .then((response) => {
+        randomDrink = response.data.drinks;
+        setFetchedRandomDrink(randomDrink);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // handle individual drinks
+  const handleIndividualDrinks = (id) => {
+    navigate(`/drinks_categories/:category/${id}`);
   };
 
 
@@ -98,25 +120,25 @@ const DrinksFunCorner = () => {
               random drink recipe.
             </p>
             <div className="random_button_div">
-              <button className="random_btn">
+              <button className="random_btn" onClick={handleRandomDrink}>
                 Random
               </button>
             </div>
-            {/* <div className="random_meal">
-              {fetchedRandomMeal.map((meal) => {
+            <div className="random_meal">
+              {fetchedRandomDrink.map((drink) => {
                 return (
-                  <div className="random_div" key={meal.idMeal}>
-                    <h3 className="random_title">{meal.strMeal}</h3>
+                  <div className="random_div" key={drink.idDrink}>
+                    <h3 className="random_title">{drink.strDrink}</h3>
                     <img
                       className="random_img"
-                      src={meal.strMealThumb}
-                      alt={meal.strMeal}
-                      
+                      src={drink.strDrinkThumb}
+                      alt={drink.strDrink}
+                      onClick={() => handleIndividualDrinks(drink.idDrink)}
                     />
                   </div>
                 );
               })}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
