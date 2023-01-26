@@ -91,11 +91,11 @@ const DrinksFunCorner = () => {
             </div>
           </div>
 
-          {/* random meal */}
+          {/* random drink */}
           <div className="randoms">
             <p>
               Want to be even more adventurous? Click the random button to get a
-              random meal recipe.
+              random drink recipe.
             </p>
             <div className="random_button_div">
               <button className="random_btn">
@@ -120,12 +120,6 @@ const DrinksFunCorner = () => {
           </div>
         </div>
       </div>
-
-      {/* search by */}
-    
-      {/* 3. random */}
-      {/* 5. glass */}
-      {/* alcoholic/non-alcoholic */}
     </div>
   );
 };

@@ -39,7 +39,7 @@ const FirstLetter = () => {
   };
 
   return (
-    <section>
+    <section className="drinks_search_sect">
       <DrinksNavigation type="category" />
       <div className="search_div">
         <h1 className="search_heading">Search By First Letter</h1>
@@ -73,7 +73,7 @@ const FirstLetter = () => {
               );
             })
           ) : (
-            <h1 className="no_recipe">No recipe found</h1>
+            <h1 className="search_found">No recipes found. Please try another letter...</h1>
           )}
         </div>
       </div>

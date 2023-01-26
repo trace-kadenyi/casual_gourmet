@@ -39,7 +39,7 @@ const Name = () => {
   };
 
   return (
-    <section>
+    <section className="drinks_search_sect">
       <DrinksNavigation type="category" />
       <div className="search_div">
         <h1 className="search_heading">Search By Name</h1>
@@ -73,7 +73,7 @@ const Name = () => {
               );
             })
           ) : (
-            <h1 className="no_recipe">No recipe found</h1>
+            <h1 className="search_found">No recipes found. Please try another name...</h1>
           )}
         </div>
       </div>
