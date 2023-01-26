@@ -1,3 +1,23 @@
 .drinks_details_img {
   width: 200px;
 }
+
+.back_btn {
+  border: 2px solid #c73866;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.back_btn:hover {
+  background: #c73866;
+  text-decoration: underline;
+  
+}
