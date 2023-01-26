@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import swal from "sweetalert";
 
 import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
+import "./drinks_searches.css";
 
 const ByAlcohol = () => {
   const [alcohol, setAlcohol] = useState("");
@@ -24,12 +26,25 @@ const ByAlcohol = () => {
     await axios
       .get(BASE_URL)
       .then((response) => {
-        alcoholContainer = response.data.drinks; 
+        alcoholContainer = response.data.drinks;
         setFetchedAlcohol(alcoholContainer);
       })
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  // handle go button
+  const handleGo = () => {
+    if (alcohol === "alcoholic" || alcohol === "non alcoholic") {
+      fetchAlcohol();
+    } else {
+      swal(
+        "Oops!",
+        "Please enter either 'Alcoholic' or 'Non Alcoholic' in the search box.",
+        "error"
+      );
+    }
   };
 
   // handle individual drinks
@@ -38,29 +53,28 @@ const ByAlcohol = () => {
     console.log(category);
   };
 
-
   return (
-    <section>
+    <section className="drinks_search_sect">
       <DrinksNavigation type="category" />
       <div className="search_div">
         <h1 className="search_heading">Search By Alcohol</h1>
         <div className="input_go">
           <input
-            className="search_input"
+            className="search_input drink_input"
             type="text"
             placeholder="Enter alcohol"
             autoFocus
-            value={alcohol}
+            value={alcohol.replace("-", " ")}
             onChange={(e) => setAlcohol(e.target.value)}
           />
 
-          <button className="go_btn" onClick={fetchAlcohol}>
+          <button className="go_btn" onClick={handleGo}>
             Go
-          </button> 
+          </button>
         </div>
-        {/* display drinks if present in the database */} 
+        {/* display drinks if present in the database */}
         <div className="one_cat">
-           {fetchedAlcohol ? (
+          {fetchedAlcohol ? (
             fetchedAlcohol.map((item) => {
               return (
                 <div className="individual_items" key={item.idDrink}>
@@ -75,12 +89,12 @@ const ByAlcohol = () => {
               );
             })
           ) : (
-            <h1 className="no_recipe">No recipe found</h1>
+            <h1 className="search_found">No recipes found.</h1>
           )}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ByAlcohol
+export default ByAlcohol;
