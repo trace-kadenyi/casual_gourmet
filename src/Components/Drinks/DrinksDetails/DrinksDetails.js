@@ -57,7 +57,7 @@ const DrinksDetails = () => {
   }, []);
 
   return (
-    <div>
+    <div className="individual_meal">
       <DrinksNavigation type="category" />
       {loading ? (
         <h1>Loading</h1>
@@ -66,15 +66,36 @@ const DrinksDetails = () => {
           {fulfilled ? (
             fetchedDrinks.map((drink) => {
               return (
-                <div key={drink.idDrink}>
-                  <h1>{drink.strDrink}</h1>
+                <div key={drink.idDrink} className="individual_meal_details">
+                  <h1 className="meal_name">{drink.strDrink}</h1>
                   <img
                     src={drink.strDrinkThumb}
                     alt={drink.strDrink}
                     className="drinks_details_img"
                   />
-                  <p>{drink.strTags}</p>
-                  <p>{drink.strCategory}</p>
+                  {/* fun facts */}
+                  <div className="fun_facts">
+                    <p className="facts">Fun Facts</p>
+                    <p>
+                      <span className="basics">Category:</span>{" "}
+                      {drink.strCategory}
+                    </p>
+                     <p>
+                      <span className="basics">Glass:</span>{" "}
+                      {drink.strGlass}
+                    </p>
+                     <p>
+                      <span className="basics">Type:</span>{" "}
+                      {drink.strAlcoholic}
+                    </p>
+                    <p>
+                      <span className="basics">Tags:</span>{" "}
+                      {drink.strTags
+                        ? drink.strTags.split(",").join(", ")
+                        : "No tags available"}
+                    </p>
+                  </div>
+                  {/* back button */}
                   <button
                     className="back_btn"
                     onClick={() => {
@@ -83,9 +104,7 @@ const DrinksDetails = () => {
                   >
                     Back to {drink.strCategory}
                   </button>
-                  <p>{drink.strIBA}</p>
-                  <p>{drink.strAlcoholic}</p>
-                  <p>{drink.strGlass}</p>
+                 
                   <p>{drink.strInstructions}</p>
                   <p>{drink.strInstructionsES}</p>
                   <p>{drink.strInstructionsDE}</p>
