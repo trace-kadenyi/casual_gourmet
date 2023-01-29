@@ -24,3 +24,19 @@
 .ingredients_div {
   margin-bottom: 50px;
 }
+
+.lang {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 2px;
+  border: 2px  solid;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
