@@ -106,11 +106,11 @@ const DrinksDetails = () => {
                   </button>
           
                   <p className="prep">PREPARATION</p>
-                  <span>English</span>
+                  <span className="lang">English</span>
                   <p className="instructions">{drink.strInstructions}</p>
-                    <span>German</span>
+                    <span className="lang">German</span>
                   <p className="instructions">{drink.strInstructionsDE}</p>
-                    <span>Italian</span>
+                    <span className="lang">Italian</span>
                     <p className="instructions">{drink.strInstructionsIT}</p>
                   {/* display ingredients */}
                   <div className="ingredients_div">
