@@ -19,5 +19,8 @@
 .back_btn:hover {
   background: #c73866;
   text-decoration: underline;
-  
+}
+
+.ingredients_div {
+  margin-bottom: 50px;
 }
