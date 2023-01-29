@@ -1,5 +1,12 @@
 .drinks_details_img {
-  width: 200px;
+  width: 300px;
+  height: 260px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .back_btn {
@@ -39,4 +46,13 @@
   font-size: 0.7rem;
   font-weight: bold;
 }
+
+@media screen and (max-width: 280px) {
+  .drinks_details_img {
+     width: 200px;
+    height: auto;
+  }
+}
+  
+
 

@@ -80,13 +80,11 @@ const DrinksDetails = () => {
                       <span className="basics">Category:</span>{" "}
                       {drink.strCategory}
                     </p>
-                     <p>
-                      <span className="basics">Glass:</span>{" "}
-                      {drink.strGlass}
+                    <p>
+                      <span className="basics">Glass:</span> {drink.strGlass}
                     </p>
-                     <p>
-                      <span className="basics">Type:</span>{" "}
-                      {drink.strAlcoholic}
+                    <p>
+                      <span className="basics">Type:</span> {drink.strAlcoholic}
                     </p>
                     <p>
                       <span className="basics">Tags:</span>{" "}
@@ -104,14 +102,14 @@ const DrinksDetails = () => {
                   >
                     Back to {drink.strCategory}
                   </button>
-          
+
                   <p className="prep">PREPARATION</p>
                   <span className="lang">English</span>
                   <p className="instructions">{drink.strInstructions}</p>
-                    <span className="lang">German</span>
+                  <span className="lang">German</span>
                   <p className="instructions">{drink.strInstructionsDE}</p>
-                    <span className="lang">Italian</span>
-                    <p className="instructions">{drink.strInstructionsIT}</p>
+                  <span className="lang">Italian</span>
+                  <p className="instructions">{drink.strInstructionsIT}</p>
                   {/* display ingredients */}
                   <div className="ingredients_div">
                     <h2 className="ingredient_head">Ingredients</h2>
