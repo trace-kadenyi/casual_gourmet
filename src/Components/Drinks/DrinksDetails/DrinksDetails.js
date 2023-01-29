@@ -104,15 +104,17 @@ const DrinksDetails = () => {
                   >
                     Back to {drink.strCategory}
                   </button>
-                 
-                  <p>{drink.strInstructions}</p>
-                  <p>{drink.strInstructionsES}</p>
-                  <p>{drink.strInstructionsDE}</p>
-                  <p>{drink.strInstructionsFR}</p>
-                  <p>{drink.strInstructionsIT}</p>
+          
+                  <p className="prep">PREPARATION</p>
+                  <span>English</span>
+                  <p className="instructions">{drink.strInstructions}</p>
+                    <span>German</span>
+                  <p className="instructions">{drink.strInstructionsDE}</p>
+                    <span>Italian</span>
+                    <p className="instructions">{drink.strInstructionsIT}</p>
                   {/* display ingredients */}
                   <div className="ingredients_div">
-                    <h2 className="ingredients_heading">Ingredients</h2>
+                    <h2 className="ingredient_head">Ingredients</h2>
                     <div className="columns is-multiline">
                       {handleIngredients().map((ingredient, index) => (
                         <div key={index} className="column is-half">
@@ -137,7 +139,7 @@ const DrinksDetails = () => {
               );
             })
           ) : (
-            <h2>Loading...</h2>
+            <h2>Back to homepage...</h2>
           )}
         </div>
       )}
