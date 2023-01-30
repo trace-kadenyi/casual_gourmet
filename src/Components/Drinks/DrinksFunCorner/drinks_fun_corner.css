@@ -1,0 +1,23 @@
+.drinks_random_btn {
+  background: black;
+  border: 2px solid #c73866;
+}
+
+.drinks_random_btn:hover {
+  background: #c73866;
+  border: 2px solid black;
+}
+
+.drinks_search_btns {
+  background: black;
+  border: 2px solid #c73866;
+}
+
+.alcoholic_btn {
+  text-align: center;
+  height: 75px;
+}
+
+.drinks_random_img {
+  height: auto;
+}

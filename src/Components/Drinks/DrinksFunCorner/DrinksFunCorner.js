@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
+import "./drinks_fun_corner.css";
 
 const DrinksFunCorner = () => {
   const [fetchedRandomDrink, setFetchedRandomDrink] = useState([]);
@@ -71,14 +72,14 @@ const DrinksFunCorner = () => {
             <h3>Search By</h3>
             <div className="searches">
               {/* {/* search by main ingredient */}
-              <p className="main_ingredient_btn">
+              <p className="main_ingredient_btn drinks_search_btns">
                 Main Ingredient{" "}
                 <button onClick={handleMainIngredient} className="click">
                   GO
                 </button>
               </p>
               {/* search by first letter */}
-              <p className="first_letter_btn">
+              <p className="first_letter_btn drinks_search_btns">
                 First Letter{" "}
                 <button className="click" onClick={handleFirstLetter}>
                   GO
@@ -86,7 +87,7 @@ const DrinksFunCorner = () => {
               </p>
 
               {/* search by name */}
-              <p className="name_btn">
+              <p className="name_btn drinks_search_btns">
                 Name{" "}
                 <button onClick={handleName} className="click">
                   GO
@@ -94,7 +95,7 @@ const DrinksFunCorner = () => {
               </p>
 
                {/* search by glass */}
-              <p className="name_btn">
+              <p className="name_btn drinks_search_btns">
                 Glass{" "}
                 <button onClick={handleGlass} className="click">
                   GO
@@ -102,7 +103,7 @@ const DrinksFunCorner = () => {
               </p>
 
                {/* search by alcoholic */}
-              <p className="name_btn">
+              <p className="name_btn drinks_search_btns alcoholic_btn">
                 Alcoholic / Non-Alcoholic{" "}
                 <button onClick={handleAlcoholic} className="click">
                   GO
@@ -120,7 +121,7 @@ const DrinksFunCorner = () => {
               random drink recipe.
             </p>
             <div className="random_button_div">
-              <button className="random_btn" onClick={handleRandomDrink}>
+              <button className="random_btn drinks_random_btn" onClick={handleRandomDrink}>
                 Random
               </button>
             </div>
@@ -130,7 +131,7 @@ const DrinksFunCorner = () => {
                   <div className="random_div" key={drink.idDrink}>
                     <h3 className="random_title">{drink.strDrink}</h3>
                     <img
-                      className="random_img"
+                      className="random_img drinks_random_img"
                       src={drink.strDrinkThumb}
                       alt={drink.strDrink}
                       onClick={() => handleIndividualDrinks(drink.idDrink)}

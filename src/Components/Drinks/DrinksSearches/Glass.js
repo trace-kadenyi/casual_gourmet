@@ -52,7 +52,7 @@ const Glass = () => {
             value={glass}
             onChange={(e) => setGlass(e.target.value)}
           />
-          <button className="go_btn" onClick={fetchGlass}>
+          <button className="go_btn drinks_go" onClick={fetchGlass}>
             Go
           </button>
         </div>

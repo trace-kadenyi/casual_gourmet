@@ -52,7 +52,7 @@ const FirstLetter = () => {
             value={firstLetter}
             onChange={(e) => setFirstLetter(e.target.value)}
           />
-          <button className="go_btn" onClick={fetchFirstLetter}>
+          <button className="go_btn drinks_go" onClick={fetchFirstLetter}>
             Go
           </button>
         </div>

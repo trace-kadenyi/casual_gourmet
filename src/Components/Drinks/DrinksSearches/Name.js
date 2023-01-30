@@ -52,7 +52,7 @@ const Name = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <button className="go_btn" onClick={fetchName}>
+          <button className="go_btn drinks_go" onClick={fetchName}>
             Go
           </button>
         </div>

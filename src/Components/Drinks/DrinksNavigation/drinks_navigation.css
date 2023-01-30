@@ -5,4 +5,5 @@
 
 .drinks_nav_list li:hover {
   background: #c73866;
+  border: 2px solid black;
 }

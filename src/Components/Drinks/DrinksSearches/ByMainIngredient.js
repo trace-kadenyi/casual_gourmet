@@ -52,7 +52,7 @@ const MainIngredient = () => {
             value={ingredient}
             onChange={(e) => setIngredient(e.target.value)}
           />
-          <button className="go_btn" onClick={fetchMainIngredient}>
+          <button className="go_btn drinks_go" onClick={fetchMainIngredient}>
             Go
           </button>
         </div>

@@ -57,7 +57,7 @@ const ByAlcohol = () => {
     <section className="drinks_search_sect">
       <DrinksNavigation type="category" />
       <div className="search_div">
-        <h1 className="search_heading">Search By Alcohol</h1>
+        <h1 className="search_heading">Search By Type</h1>
         <div className="input_go">
           <input
             className="search_input drink_input"
@@ -68,7 +68,7 @@ const ByAlcohol = () => {
             onChange={(e) => setAlcohol(e.target.value)}
           />
 
-          <button className="go_btn" onClick={handleGo}>
+          <button className="go_btn drinks_go" onClick={handleGo}>
             Go
           </button>
         </div>
