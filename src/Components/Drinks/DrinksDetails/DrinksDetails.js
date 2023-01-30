@@ -109,9 +109,9 @@ const DrinksDetails = () => {
                     {drink.strInstructions ? (
                       drink.strInstructions
                     ) : (
-                      <p style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                      <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
                         Not available...
-                      </p>
+                      </span>
                     )}
                   </p>
                   <span className="lang">German</span>
@@ -119,9 +119,9 @@ const DrinksDetails = () => {
                     {drink.strInstructionsDE ? (
                       drink.strInstructionsDE
                     ) : (
-                      <p style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                      <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
                         Not available...
-                      </p>
+                      </span>
                     )}
                   </p>
                   <span className="lang">Italian</span>
@@ -129,18 +129,18 @@ const DrinksDetails = () => {
                     {drink.strInstructionsIT ? (
                       drink.strInstructionsIT
                     ) : (
-                      <p style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                      <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
                         Not available...
-                      </p>
+                      </span>
                     )}
                   </p>
                   {/* display ingredients */}
                   <div className="ingredients_div">
-                    <h2 className="ingredient_head">Ingredients</h2>
+                    <p className="ingredient_head">Ingredients</p>
                     <div className="columns is-multiline">
                       {handleIngredients().map((ingredient, index) => (
                         <div key={index} className="column is-half">
-                          <div className="card ingredient_card">
+                          <div className="card ingredient_card drinks_ingredients_card">
                             <div className="card-content">
                               <div className="content">
                                 <p className="ingredient_span">
