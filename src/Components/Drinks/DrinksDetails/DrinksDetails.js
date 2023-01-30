@@ -107,7 +107,9 @@ const DrinksDetails = () => {
                   <span className="lang">English</span>
                   <p className="instructions">{drink.strInstructions}</p>
                   <span className="lang">German</span>
-                  <p className="instructions">{drink.strInstructionsDE}</p>
+                  <p className="instructions">
+                    {drink.strInstructionsDE ? drink.strInstructionsDE : <p style={{ fontWeight: "bold", fontSize: "0.8rem"}}>Not available...</p>}
+                  </p>
                   <span className="lang">Italian</span>
                   <p className="instructions">{drink.strInstructionsIT}</p>
                   {/* display ingredients */}
