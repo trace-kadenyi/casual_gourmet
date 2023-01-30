@@ -105,13 +105,35 @@ const DrinksDetails = () => {
 
                   <p className="prep">PREPARATION</p>
                   <span className="lang">English</span>
-                  <p className="instructions">{drink.strInstructions}</p>
+                  <p className="instructions">
+                    {drink.strInstructions ? (
+                      drink.strInstructions
+                    ) : (
+                      <p style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                        Not available...
+                      </p>
+                    )}
+                  </p>
                   <span className="lang">German</span>
                   <p className="instructions">
-                    {drink.strInstructionsDE ? drink.strInstructionsDE : <p style={{ fontWeight: "bold", fontSize: "0.8rem"}}>Not available...</p>}
+                    {drink.strInstructionsDE ? (
+                      drink.strInstructionsDE
+                    ) : (
+                      <p style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                        Not available...
+                      </p>
+                    )}
                   </p>
                   <span className="lang">Italian</span>
-                  <p className="instructions">{drink.strInstructionsIT}</p>
+                  <p className="instructions">
+                    {drink.strInstructionsIT ? (
+                      drink.strInstructionsIT
+                    ) : (
+                      <p style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                        Not available...
+                      </p>
+                    )}
+                  </p>
                   {/* display ingredients */}
                   <div className="ingredients_div">
                     <h2 className="ingredient_head">Ingredients</h2>
