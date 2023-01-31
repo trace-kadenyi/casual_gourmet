@@ -161,7 +161,17 @@ const DrinksDetails = () => {
               );
             })
           ) : (
-            <h2>Back to homepage...</h2>
+            <div className="wrong">
+              <h3>Oops, Something went wrong!</h3>
+              <button
+                className="wrong_btn"
+                onClick={() => {
+                  navigate("/drinks_categories");
+                }}
+              >
+                Back to Drinks Homepage
+              </button>
+            </div>
           )}
         </div>
       )}

@@ -41,7 +41,7 @@
   color: white;
   border-radius: 20px;
   padding: 2px;
-  border: 2px  solid;
+  border: 2px solid;
   font-size: 0.7rem;
   font-weight: bold;
 }
@@ -51,12 +51,45 @@
   border: 2px solid #c73866;
 }
 
+.wrong {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.wrong h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  padding: 5px;
+}
+
+.wrong_btn {
+  padding: 10px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid #c73866;
+  cursor: pointer;
+  max-width: 200px;
+  margin: 5px;
+  letter-spacing: 0.1rem;
+}
+
+.wrong_btn:hover {
+  background: #c73866;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 280px) {
   .drinks_details_img {
-     width: 200px;
+    width: 200px;
     height: auto;
   }
 }
-  
-
-
