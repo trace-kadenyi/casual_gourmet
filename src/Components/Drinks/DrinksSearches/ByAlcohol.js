@@ -50,7 +50,6 @@ const ByAlcohol = () => {
   // handle individual drinks
   const handleIndividualDrinks = (id) => {
     navigate(`/drinks_categories/:category/${id}`);
-    console.log(category);
   };
 
   return (
