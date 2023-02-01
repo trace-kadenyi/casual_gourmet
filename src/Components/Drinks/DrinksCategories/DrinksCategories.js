@@ -25,7 +25,7 @@ const DrinksCategories = () => {
   return (
     <div className="drinks_categories_sect">
       <DrinksNavigation type="Categories" />
-      <h1 className="categories_head">Drinks Categories</h1>
+      <h1 className="categories_head drinks_cat_head">Drinks Categories</h1>
       <div className="drinks_categories_mainDiv">
         {loading ? (
           <h1 className="search_found">Loading...</h1>

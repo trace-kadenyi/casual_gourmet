@@ -43,7 +43,7 @@ const CoffeeTea = () => {
         <h1>Loading...</h1>
       ) : (
         <div className="category_container">
-          <h1 className="title_head">Coffee / Tea</h1>
+          <h1 className="title_head drinks_cat_head">Coffee / Tea</h1>
           <div className="one_cat">
             {fetchedCategory ? (
               fetchedCategory.map((drink) => {

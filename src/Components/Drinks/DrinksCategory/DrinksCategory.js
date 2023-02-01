@@ -62,7 +62,7 @@ const DrinksCategory = () => {
         <h1>Loading...</h1>
       ) : (
         <div className="category_container">
-          <h1 className="title_head">{foundCategory.strCategory}</h1>
+          <h1 className="title_head drinks_cat_head">{foundCategory.strCategory}</h1>
           <div className="one_cat">
             {fetchedCategory ? (
               fetchedCategory.map((drink, index) => (
