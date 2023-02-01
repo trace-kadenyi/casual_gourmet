@@ -3,11 +3,9 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-// import "bulma/css/bulma.min.css";
-
 import "./meal_details.css";
 import Navbar from "../MealsNavigation/Navbar";
-import tube from "../../../assets/youtube.png";
+import tube from "../../../assets/meals/youtube.png";
 
 const MealDetails = () => {
   const [fetchedMealDetails, setFetchedMealDetails] = useState([]);

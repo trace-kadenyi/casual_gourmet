@@ -69,7 +69,9 @@ const ByFirstLetter = () => {
               );
             })
           ) : (
-            <h1 className="search_found">No Recipes Found. Please try another letter...</h1>
+            <h1 className="search_found">
+              No Recipes Found. Please try another letter...
+            </h1>
           )}{" "}
         </div>
       </div>

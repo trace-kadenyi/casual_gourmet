@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
@@ -11,11 +10,6 @@ const ByAlcohol = () => {
   const [alcohol, setAlcohol] = useState("");
   const [fetchedAlcohol, setFetchedAlcohol] = useState([]);
   const navigate = useNavigate();
-  const { categories, loading, fulfilled, rejected } = useSelector(
-    (state) => state.drinksCategories
-  );
-
-  const { category } = useParams();
 
   // fetch drinks by alcohol
   const BASE_URL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${alcohol}`;

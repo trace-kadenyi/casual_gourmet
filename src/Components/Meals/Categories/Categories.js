@@ -3,14 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { TiArrowForwardOutline } from "react-icons/ti";
 import "./categories.css";
 import { fetchCategories } from "../../../Redux/Meals/categoriesslice";
-import { useNavigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Navbar from "../MealsNavigation/Navbar";
 
 const Categories = () => {
-  const [showMore, setShowMore] = useState(false);
   const { categories, loading } = useSelector((state) => state.mealsCategories);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -38,7 +36,6 @@ const Categories = () => {
           categories.map((category) => (
             <div
               key={Math.random()}
-              // key={category.idCategory}
               className={`category_div ${assignClass(category.strCategory)}`}
             >
               <h1 className="cat_heading">{category.strCategory}</h1>

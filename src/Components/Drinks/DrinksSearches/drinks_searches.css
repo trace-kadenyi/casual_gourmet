@@ -1,5 +1,5 @@
 .drinks_search_sect {
-    background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
     url("../../../assets/drinks/search.jpg");
   background-position: center center;
   min-height: 100vh;

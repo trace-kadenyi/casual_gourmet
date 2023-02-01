@@ -70,7 +70,9 @@ const ByName = () => {
               );
             })
           ) : (
-            <h1 className="search_found">No Recipes Found. Please try another name...</h1>
+            <h1 className="search_found">
+              No Recipes Found. Please try another name...
+            </h1>
           )}{" "}
         </div>
       </div>

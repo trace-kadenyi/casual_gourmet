@@ -27,7 +27,7 @@
 }
 
 .drinks_search_bys {
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -37,9 +37,9 @@
   border-radius: 20px;
   background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
     url("../../../assets/drinks/fun_corner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .drinks_search_bys h3 {
@@ -49,7 +49,7 @@
 }
 
 .drinks_randoms {
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -57,10 +57,10 @@
   border: none;
   padding-bottom: 20px;
   background: linear-gradient(rgba(148, 69, 69, 0.7), rgba(48, 42, 42, 0.7)),
-    url("../../../assets/drinks/spares/s6.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    url("../../../assets/drinks/random.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .drinks_randoms p {

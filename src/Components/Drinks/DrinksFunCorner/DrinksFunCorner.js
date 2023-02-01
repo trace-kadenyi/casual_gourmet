@@ -63,14 +63,13 @@ const DrinksFunCorner = () => {
       </h3>
       <p className="fun_intro_para">
         So, you're an amateur mixologist and you want to try your hand at making
-        some drinks...<br />
-        There's no reason why you can't have some fun in the
-        process. <br />
-        On this page, you can search for various drinks based on
-        the main ingredient, name, glass or type.{" "}
+        some drinks...
         <br />
-        You can even take it further and choose what drink to make based
-        on the first letter. <br />
+        There's no reason why you can't have some fun in the process. <br />
+        On this page, you can search for various drinks based on the main
+        ingredient, name, glass or type. <br />
+        You can even take it further and choose what drink to make based on the
+        first letter. <br />
         So...
         <br /> Get your ingredients and let's get mixing.
       </p>

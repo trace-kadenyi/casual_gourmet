@@ -65,7 +65,7 @@
 
 .soft_drink_cat {
   background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
-    url("../../../assets/drinks/so1.jpg");
+    url("../../../assets/drinks/soft_drink.jpg");
   background-position: center center;
   background-size: cover;
 }

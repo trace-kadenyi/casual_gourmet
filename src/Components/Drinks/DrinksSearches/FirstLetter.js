@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
 
@@ -9,11 +8,6 @@ const FirstLetter = () => {
   const [firstLetter, setFirstLetter] = useState("");
   const [fetchedFirstLetter, setFetchedFirstLetter] = useState([]);
   const navigate = useNavigate();
-  const { categories, loading, fulfilled, rejected } = useSelector(
-    (state) => state.drinksCategories
-  );
-
-  const { category } = useParams();
 
   // fetch drinks by first letter
   const BASE_URL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${firstLetter}`;
@@ -72,7 +66,9 @@ const FirstLetter = () => {
               );
             })
           ) : (
-            <h1 className="search_found">No recipes found. Please try another letter...</h1>
+            <h1 className="search_found">
+              No recipes found. Please try another letter...
+            </h1>
           )}
         </div>
       </div>
