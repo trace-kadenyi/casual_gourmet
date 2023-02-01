@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,6 @@ import "./drinks_fun_corner.css";
 const DrinksFunCorner = () => {
   const [fetchedRandomDrink, setFetchedRandomDrink] = useState([]);
   const navigate = useNavigate();
-
 
   // handle search by main ingredient
   const handleMainIngredient = () => {
@@ -56,16 +55,27 @@ const DrinksFunCorner = () => {
     navigate(`/drinks_categories/:category/${id}`);
   };
 
-
   return (
     <div className="fun_corner_sect">
       <DrinksNavigation type="category" />
-      <h1>Drinks Fun Corner</h1>
-
+      <h3 className="fun_intro">
+        Have a little fun making your drinks in this corner{" "}
+      </h3>
+      <p className="fun_intro_para">
+        So, you're an amateur mixologist and you want to try your hand at making
+        some drinks...<br />
+        There's no reason why you can't have some fun in the
+        process. <br />
+        On this page, you can search for various drinks based on
+        the main ingredient, name, glass or type.{" "}
+        <br />
+        You can even take it further and choose what drink to make based
+        on the first letter. <br />
+        So...
+        <br /> Get your ingredients and let's get mixing.
+      </p>
 
       <div className="fun_corner_div">
-       
-
         <div className="all_queries">
           {/* search buttons/input fields */}
           <div className="search_bys">
@@ -94,7 +104,7 @@ const DrinksFunCorner = () => {
                 </button>
               </p>
 
-               {/* search by glass */}
+              {/* search by glass */}
               <p className="name_btn drinks_search_btns">
                 Glass{" "}
                 <button onClick={handleGlass} className="click">
@@ -102,15 +112,13 @@ const DrinksFunCorner = () => {
                 </button>
               </p>
 
-               {/* search by alcoholic */}
+              {/* search by alcoholic */}
               <p className="name_btn drinks_search_btns alcoholic_btn">
                 Alcoholic / Non-Alcoholic{" "}
                 <button onClick={handleAlcoholic} className="click">
                   GO
                 </button>
               </p>
-
-            
             </div>
           </div>
 
@@ -121,7 +129,10 @@ const DrinksFunCorner = () => {
               random drink recipe.
             </p>
             <div className="random_button_div">
-              <button className="random_btn drinks_random_btn" onClick={handleRandomDrink}>
+              <button
+                className="random_btn drinks_random_btn"
+                onClick={handleRandomDrink}
+              >
                 Random
               </button>
             </div>
@@ -148,7 +159,3 @@ const DrinksFunCorner = () => {
 };
 
 export default DrinksFunCorner;
-
-
-
-
