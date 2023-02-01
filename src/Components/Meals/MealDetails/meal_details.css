@@ -15,9 +15,7 @@
   justify-content: center;
 }
 .ingredient_card {
-  background: linear-gradient(90deg, 
-    #c73866 0%, #fe676e 100%
-  );
+  background: linear-gradient(90deg, #c73866 0%, #fe676e 100%);
   width: 40vw;
   padding: 10px;
   margin-bottom: 20px;
@@ -33,7 +31,6 @@
   background-color: rgb(233, 223, 223);
   color: #c73866;
 }
-
 
 .ingredient_head,
 .prep,
@@ -57,9 +54,13 @@
   text-align: center;
 }
 
+.fact {
+  font-size: 0.8rem;
+}
+
 .meal_image {
   width: 30%;
-  height: auto
+  height: auto;
 }
 
 .basics {
@@ -72,7 +73,7 @@
   width: 90vw;
   margin: 0 auto;
   letter-spacing: 0.04rem;
-  line-height:2rem;
+  line-height: 2rem;
   text-align: center;
 }
 

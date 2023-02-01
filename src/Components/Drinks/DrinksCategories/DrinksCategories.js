@@ -26,6 +26,9 @@ const DrinksCategories = () => {
     <div className="drinks_categories_sect">
       <DrinksNavigation type="Categories" />
       <h1 className="categories_head drinks_cat_head">Drinks Categories</h1>
+      <p className="categories_intro_para drinks_cat_head">
+        Drinks are a great way to relax and unwind after a long day. Like meals, there are numerous categories of drinks available. Want to try your hand at mixology from the comfort of your kitchen? Click on any category to view multiple recipes for drinks from mocktails to cocktails.
+      </p>
       <div className="drinks_categories_mainDiv">
         {loading ? (
           <h1 className="search_found">Loading...</h1>

@@ -41,13 +41,13 @@ const About = () => {
           dinner...
         </p>
         <p>
-          Your son volunteered you to make cupcakes for the entire class....
+          Your son volunteered you to make cupcakes for the entire class...
         </p>
         <p><span className="panic">Don't panic</span></p>
         <p>
           No matter how busy you are, how overwhelmed, how inexperienced you
           might be in the kitchen, it’s going to be fine. In fact, it’s going to
-          be spectacular. This recipes-app will walk you through it every step
+          be spectacular. This recipes app will walk you through it every step
           of the way.
         </p>
         <p>

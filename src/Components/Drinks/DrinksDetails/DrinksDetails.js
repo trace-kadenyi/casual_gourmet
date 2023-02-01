@@ -76,17 +76,17 @@ const DrinksDetails = () => {
                   {/* fun facts */}
                   <div className="fun_facts">
                     <p className="facts">Fun Facts</p>
-                    <p>
+                    <p className="fact">
                       <span className="basics">Category:</span>{" "}
                       {drink.strCategory}
                     </p>
-                    <p>
+                    <p className="fact">
                       <span className="basics">Glass:</span> {drink.strGlass}
                     </p>
-                    <p>
+                    <p className="fact">
                       <span className="basics">Type:</span> {drink.strAlcoholic}
                     </p>
-                    <p>
+                    <p className="fact">
                       <span className="basics">Tags:</span>{" "}
                       {drink.strTags
                         ? drink.strTags.split(",").join(", ")

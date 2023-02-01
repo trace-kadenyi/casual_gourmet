@@ -76,26 +76,19 @@ const MealDetails = () => {
               {fetchedMealDetails.status === 200
                 ? fetchedMealDetails.data.meals.map((meal, index) => (
                     <div key={index} className="individual_meal_details">
-                      <h1 className="meal_name">
-                        {meal.strMeal}
-                      </h1>
-                      {/* <img
-                        id={meal.idMeal}
-                        className="meal_image"
-                        src={meal.strMealThumb}
-                        alt={meal.strMeal}
-                      /> */}
+                      <h1 className="meal_name">{meal.strMeal}</h1>
+
                       <div className="fun_facts">
                         <p className="facts">Fun Facts</p>
-                        <p>
+                        <p className="fact">
                           <span className="basics">Country of Origin: </span>
                           {meal.strArea}
                         </p>
-                        <p>
+                        <p className="fact">
                           <span className="basics">Category:</span>{" "}
                           {meal.strCategory}
                         </p>
-                        <p>
+                        <p className="fact">
                           <span className="basics">Tags:</span>{" "}
                           {meal.strTags
                             ? meal.strTags.split(",").join(", ")
@@ -103,9 +96,7 @@ const MealDetails = () => {
                         </p>
                       </div>
 
-                      <p className="prep">
-                        PREPARATION
-                      </p>
+                      <p className="prep">PREPARATION</p>
                       <p className="instructions mt-5">
                         {/* add see more button */}
                         {more
@@ -134,9 +125,7 @@ const MealDetails = () => {
                         </button>
                       </p>
                       {/* ingredients */}
-                      <p className="ingredient_head">
-                        Ingredients
-                      </p>
+                      <p className="ingredient_head">Ingredients</p>
                       <div className="section">
                         <div className="container">
                           <div className="columns is-multiline">
@@ -161,20 +150,15 @@ const MealDetails = () => {
                         </div>
                       </div>
                       {/* video */}
-                    <div className="vid_div">
-                      <p className="video_head">
-                        Video
-                      </p>
-                      <p className="vid_instructions">
-                        Need more guidance? Watch the video below for the visual on how to prepare this meal. Have fun with it!
-                      </p>
+                      <div className="vid_div">
+                        <p className="video_head">Video</p>
+                        <p className="vid_instructions">
+                          Need more guidance? Watch the video below for the
+                          visual on how to prepare this meal. Have fun with it!
+                        </p>
                         <a href={meal.strYoutube} target="_blank">
-                        <img
-                          className="tube"
-                          src={tube}
-                          alt="youtube"
-                        />
-                      </a>
+                          <img className="tube" src={tube} alt="youtube" />
+                        </a>
                       </div>
                     </div>
                   ))

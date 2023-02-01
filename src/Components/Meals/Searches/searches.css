@@ -22,6 +22,7 @@
   border-radius: 10px;
   outline: none;
   border: #c73866 1px solid;
+  text-transform: capitalize;
 }
 
 .go_btn {

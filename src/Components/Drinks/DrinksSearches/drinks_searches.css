@@ -6,10 +6,6 @@
   overflow-x: hidden;
 }
 
-.drink_input {
-  text-transform: capitalize;
-}
-
 .drinks_go {
   background: black;
   border: 2px solid #c73866;

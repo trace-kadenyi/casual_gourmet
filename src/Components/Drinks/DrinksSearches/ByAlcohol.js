@@ -59,7 +59,7 @@ const ByAlcohol = () => {
         <h1 className="search_heading">Search By Type</h1>
         <div className="input_go">
           <input
-            className="search_input drink_input"
+            className="search_input"
             type="text"
             placeholder="Enter alcohol"
             autoFocus
