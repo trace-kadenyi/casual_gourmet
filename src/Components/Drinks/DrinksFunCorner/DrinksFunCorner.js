@@ -78,7 +78,7 @@ const DrinksFunCorner = () => {
       <div className="fun_corner_div">
         <div className="all_queries">
           {/* search buttons/input fields */}
-          <div className="search_bys">
+          <div className="drinks_search_bys">
             <h3>Search By</h3>
             <div className="searches">
               {/* {/* search by main ingredient */}
@@ -123,7 +123,7 @@ const DrinksFunCorner = () => {
           </div>
 
           {/* random drink */}
-          <div className="randoms">
+          <div className="drinks_randoms">
             <p>
               Want to be even more adventurous? Click the random button to get a
               random drink recipe.
