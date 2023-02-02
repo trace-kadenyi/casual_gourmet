@@ -19,7 +19,7 @@ const DrinksCategory = () => {
 
   const { category } = useParams();
 
-  const foundCategory = categories.find((cat) => cat.strCategory === category);
+  // const foundCategory = categories.find((cat) => cat.strCategory === category);
 
   let categoryContainer;
 
@@ -52,17 +52,13 @@ const DrinksCategory = () => {
   };
 
   return (
-    <div
-      className={`individual_category ${assignClass(
-        foundCategory.strCategory
-      )}`}
-    >
+    <div className={`individual_category ${assignClass(category)}`}>
       <DrinksNavigation type="category" />
       {loading ? (
         <h1>Loading...</h1>
       ) : (
         <div className="category_container">
-          <h1 className="title_head drinks_cat_head">{foundCategory.strCategory}</h1>
+          <h1 className="title_head drinks_cat_head">{category}</h1>
           <div className="one_cat">
             {fetchedCategory ? (
               fetchedCategory.map((drink, index) => (

@@ -63,7 +63,7 @@ const DrinksDetails = () => {
         <h1>Loading</h1>
       ) : (
         <div>
-          {fulfilled ? (
+          {fetchedDrinks ? (
             fetchedDrinks.map((drink) => {
               return (
                 <div key={drink.idDrink} className="individual_meal_details">
