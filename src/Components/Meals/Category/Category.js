@@ -49,11 +49,7 @@ const Category = () => {
   };
 
   return (
-    <div
-      className={`individual_category ${assignClass(
-        category
-      )}`}
-    >
+    <div className={`individual_category ${assignClass(category)}`}>
       <Navbar type="category" />
       {loading ? (
         <h1>Loading...</h1>

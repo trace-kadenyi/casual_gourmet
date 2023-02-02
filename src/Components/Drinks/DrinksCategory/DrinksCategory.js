@@ -52,11 +52,7 @@ const DrinksCategory = () => {
   };
 
   return (
-    <div
-      className={`individual_category ${assignClass(
-        category
-      )}`}
-    >
+    <div className={`individual_category ${assignClass(category)}`}>
       <DrinksNavigation type="category" />
       {loading ? (
         <h1>Loading...</h1>

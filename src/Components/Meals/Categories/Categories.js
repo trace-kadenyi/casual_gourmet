@@ -22,7 +22,7 @@ const Categories = () => {
   return (
     <div className="categories_sect">
       <Navbar type="categories" />
-      <h1 className="categories_head">Categories</h1>
+      <h1 className="categories_head">Meal Categories</h1>
       <p className="categories_intro_para">
         Food is one of <span>life's greatest pleasures</span>. This page
         contains some of the most popular categories of food. Click on any
