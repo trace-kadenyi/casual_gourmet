@@ -55,7 +55,7 @@
 <details>
 <summary>Deployment</summary>
   <ul>
-    <li><a href="https://www.netlify.com/">Netlify</a></li>
+    <li><a href="https://www.vercel.com/">Vercel</a></li>
   </ul>
 </details>
 
@@ -83,7 +83,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://casual-gourmet.netlify.app/)
+- [Live Demo Link](https://casual-gourmet.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,13 +130,12 @@ To run the project, execute the following command:
 
 ### Deployment
 
-You can deploy the project to Netlify by following these steps:
+You can deploy the project to Vercel by following these steps:
 
-- Create a new site on Netlify
+- Create a new site on Vercel
 - Select your repository
 - Select the branch to deploy
-- Set the build command to `npm run build`
-- Set the publish directory to `build`
+- Vercel automatically configures the correct settings for your project
 - Click on deploy
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
