@@ -20,6 +20,7 @@
   color: white;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .back_btn:hover {
