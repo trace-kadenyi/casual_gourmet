@@ -68,3 +68,9 @@
   color: white;
   padding: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .drinks_search_bys {
+    width: 90vw;
+  }
+}
