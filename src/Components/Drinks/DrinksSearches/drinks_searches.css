@@ -1,0 +1,17 @@
+.drinks_search_sect {
+  background: linear-gradient(rgba(29, 28, 28, 0.7), rgba(66, 17, 17, 0.7)),
+    url("../../../assets/drinks/search.jpg");
+  background-position: center center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.drinks_go {
+  background: black;
+  border: 2px solid #c73866;
+}
+
+.drinks_go:hover {
+  background: #c73866;
+  border: 2px solid black;
+}

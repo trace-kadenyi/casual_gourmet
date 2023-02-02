@@ -114,7 +114,7 @@
   padding-bottom: 20px;
   border-radius: 20px;
   background: linear-gradient(rgba(95, 37, 37, 0.7), rgba(70, 62, 62, 0.7)),
-    url("../../../assets/funcorner/random.jpg");
+    url("../../../assets/meals/random.jpg");
 }
 
 .search_bys h3 {
@@ -137,7 +137,7 @@
   border: none;
   padding-bottom: 20px;
   background: linear-gradient(rgba(133, 47, 47, 0.7), rgba(48, 42, 42, 0.7)),
-    url("../../../assets/funcorner/search_by.jpg");
+    url("../../../assets/meals/search_by.jpg");
 }
 
 .random_button_div {

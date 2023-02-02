@@ -57,7 +57,7 @@ const DrinksDetails = () => {
   }, []);
 
   return (
-    <div>
+    <div className="individual_meal">
       <DrinksNavigation type="category" />
       {loading ? (
         <h1>Loading</h1>
@@ -66,15 +66,34 @@ const DrinksDetails = () => {
           {fulfilled ? (
             fetchedDrinks.map((drink) => {
               return (
-                <div key={drink.idDrink}>
-                  <h1>{drink.strDrink}</h1>
+                <div key={drink.idDrink} className="individual_meal_details">
+                  <h1 className="meal_name">{drink.strDrink}</h1>
                   <img
                     src={drink.strDrinkThumb}
                     alt={drink.strDrink}
                     className="drinks_details_img"
                   />
-                  <p>{drink.strTags}</p>
-                  <p>{drink.strCategory}</p>
+                  {/* fun facts */}
+                  <div className="fun_facts">
+                    <p className="facts">Fun Facts</p>
+                    <p className="fact">
+                      <span className="basics">Category:</span>{" "}
+                      {drink.strCategory}
+                    </p>
+                    <p className="fact">
+                      <span className="basics">Glass:</span> {drink.strGlass}
+                    </p>
+                    <p className="fact">
+                      <span className="basics">Type:</span> {drink.strAlcoholic}
+                    </p>
+                    <p className="fact">
+                      <span className="basics">Tags:</span>{" "}
+                      {drink.strTags
+                        ? drink.strTags.split(",").join(", ")
+                        : "No tags available"}
+                    </p>
+                  </div>
+                  {/* back button */}
                   <button
                     className="back_btn"
                     onClick={() => {
@@ -83,21 +102,45 @@ const DrinksDetails = () => {
                   >
                     Back to {drink.strCategory}
                   </button>
-                  <p>{drink.strIBA}</p>
-                  <p>{drink.strAlcoholic}</p>
-                  <p>{drink.strGlass}</p>
-                  <p>{drink.strInstructions}</p>
-                  <p>{drink.strInstructionsES}</p>
-                  <p>{drink.strInstructionsDE}</p>
-                  <p>{drink.strInstructionsFR}</p>
-                  <p>{drink.strInstructionsIT}</p>
+
+                  <p className="prep">PREPARATION</p>
+                  <span className="lang">English</span>
+                  <p className="instructions">
+                    {drink.strInstructions ? (
+                      drink.strInstructions
+                    ) : (
+                      <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                        Not available...
+                      </span>
+                    )}
+                  </p>
+                  <span className="lang">German</span>
+                  <p className="instructions">
+                    {drink.strInstructionsDE ? (
+                      drink.strInstructionsDE
+                    ) : (
+                      <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                        Not available...
+                      </span>
+                    )}
+                  </p>
+                  <span className="lang">Italian</span>
+                  <p className="instructions">
+                    {drink.strInstructionsIT ? (
+                      drink.strInstructionsIT
+                    ) : (
+                      <span style={{ fontWeight: "bold", fontSize: "0.8rem" }}>
+                        Not available...
+                      </span>
+                    )}
+                  </p>
                   {/* display ingredients */}
                   <div className="ingredients_div">
-                    <h2 className="ingredients_heading">Ingredients</h2>
+                    <p className="ingredient_head">Ingredients</p>
                     <div className="columns is-multiline">
                       {handleIngredients().map((ingredient, index) => (
                         <div key={index} className="column is-half">
-                          <div className="card ingredient_card">
+                          <div className="card ingredient_card drinks_ingredients_card">
                             <div className="card-content">
                               <div className="content">
                                 <p className="ingredient_span">
@@ -118,7 +161,17 @@ const DrinksDetails = () => {
               );
             })
           ) : (
-            <h2>Loading...</h2>
+            <div className="wrong">
+              <h3>Oops, Something went wrong!</h3>
+              <button
+                className="wrong_btn"
+                onClick={() => {
+                  navigate("/drinks_categories");
+                }}
+              >
+                Back to Drinks Homepage
+              </button>
+            </div>
           )}
         </div>
       )}

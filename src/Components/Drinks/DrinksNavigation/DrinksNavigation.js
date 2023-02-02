@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-// import "./navbar.css";
 import logo from "../../../assets/logo.jpeg";
+import "./drinks_navigation.css";
 
 const DrinksNavigation = ({ type }) => {
   const navigate = useNavigate();
@@ -37,15 +37,23 @@ const DrinksNavigation = ({ type }) => {
       <div id="header_first_div">
         <img className="logo" src={logo} alt="logo" onClick={handleHome} />
         <nav>
-          <ul className="nav_list">
-            <li onClick={handleHome}>Home</li>
-            <li onClick={handleAbout}>About</li>
+          <ul className="nav_list drinks_nav_list">
+            <li onClick={handleHome} className="drinks_nav_li">
+              Home
+            </li>
+            <li onClick={handleAbout} className="drinks_nav_li">
+              About
+            </li>
             {type === "category" ||
             type === "drink_details" ||
             type === "fun_corner" ? (
-              <li onClick={handleCategories}>Categories</li>
+              <li onClick={handleCategories} className="drinks_nav_li">
+                Categories
+              </li>
             ) : null}
-            <li onClick={handleFunCorner}>Fun Corner</li>
+            <li onClick={handleFunCorner} className="drinks_nav_li">
+              Fun Corner
+            </li>
           </ul>
         </nav>
       </div>

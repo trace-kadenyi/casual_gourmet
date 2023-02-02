@@ -1,0 +1,70 @@
+.drinks_random_btn {
+  background: black;
+  border: 2px solid #c73866;
+}
+
+.drinks_random_btn:hover {
+  background: #c73866;
+  border: 2px solid black;
+}
+
+.drinks_search_btns {
+  background: black;
+  border: 2px solid #c73866;
+}
+
+.alcoholic_btn {
+  text-align: center;
+  height: 75px;
+}
+
+.drinks_random_img {
+  height: auto;
+}
+
+.fun_intro_para {
+  line-height: 2rem;
+}
+
+.drinks_search_bys {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55vw;
+  border: none;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/fun_corner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.drinks_search_bys h3 {
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.drinks_randoms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  padding-bottom: 20px;
+  background: linear-gradient(rgba(148, 69, 69, 0.7), rgba(48, 42, 42, 0.7)),
+    url("../../../assets/drinks/random.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.drinks_randoms p {
+  text-align: center;
+  color: white;
+  padding: 10px;
+}

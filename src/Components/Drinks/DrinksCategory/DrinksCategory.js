@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+// import { TiArrowForwardOutline } from "react-icons/ti";
+
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -51,28 +53,37 @@ const DrinksCategory = () => {
 
   return (
     <div
-      className={`drinks_category ${assignClass(foundCategory.strCategory)}`}
+      className={`individual_category ${assignClass(
+        foundCategory.strCategory
+      )}`}
     >
-      <DrinksNavigation type="category"/>
+      <DrinksNavigation type="category" />
       {loading ? (
         <h1>Loading...</h1>
       ) : (
         <div className="category_container">
-          <h1>{foundCategory.strCategory}</h1>
-          <div className="one_drink_cat">
-            {fetchedCategory.map((drink) => {
-              return (
-                <div key={drink.idDrink}>
+          <h1 className="title_head drinks_cat_head">{foundCategory.strCategory}</h1>
+          <div className="one_cat">
+            {fetchedCategory ? (
+              fetchedCategory.map((drink, index) => (
+                <div key={index} className="individual_items">
                   <img
+                    id={drink.idDrink}
+                    className="recipe_image drinks_image"
                     src={drink.strDrinkThumb}
                     alt={drink.strDrink}
-                    className="drink_img"
-                    onClick={() => navigateToDrinksDetails(drink.idDrink)}
+                    onClick={(e) => navigateToDrinksDetails(drink.idDrink)}
                   />
-                  <h3 className="drink_cat_name">{drink.strDrink}</h3>
+                  <h4 id={drink.idDrink} className="meal_title">
+                    {drink.strDrink.length > 20
+                      ? `${drink.strDrink.slice(0, 20)}...`
+                      : drink.strDrink}
+                  </h4>
                 </div>
-              );
-            })}
+              ))
+            ) : (
+              <h1 className="search_found">Loading...</h1>
+            )}
           </div>
         </div>
       )}

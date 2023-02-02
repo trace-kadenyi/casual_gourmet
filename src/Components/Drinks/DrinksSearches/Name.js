@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import DrinksNavigation from "../DrinksNavigation/DrinksNavigation";
 
@@ -9,11 +8,6 @@ const Name = () => {
   const [name, setName] = useState("");
   const [fetchedName, setFetchedName] = useState([]);
   const navigate = useNavigate();
-  const { categories, loading, fulfilled, rejected } = useSelector(
-    (state) => state.drinksCategories
-  );
-
-  const { category } = useParams();
 
   // fetch drinks by name
   const BASE_URL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`;
@@ -35,11 +29,10 @@ const Name = () => {
   // handle individual drinks
   const handleIndividualDrinks = (id) => {
     navigate(`/drinks_categories/:category/${id}`);
-    console.log(category);
   };
 
   return (
-    <section>
+    <section className="drinks_search_sect">
       <DrinksNavigation type="category" />
       <div className="search_div">
         <h1 className="search_heading">Search By Name</h1>
@@ -52,7 +45,7 @@ const Name = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <button className="go_btn" onClick={fetchName}>
+          <button className="go_btn drinks_go" onClick={fetchName}>
             Go
           </button>
         </div>
@@ -73,7 +66,9 @@ const Name = () => {
               );
             })
           ) : (
-            <h1 className="no_recipe">No recipe found</h1>
+            <h1 className="search_found">
+              No recipes found. Please try another name...
+            </h1>
           )}
         </div>
       </div>

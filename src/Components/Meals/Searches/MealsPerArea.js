@@ -59,7 +59,7 @@ const MealsPerArea = () => {
                       onClick={() => handleMealDetails(meal.idMeal)}
                     />
                     <h3 className="meal_title search_head">
-                       {meal.strMeal.length > 20
+                      {meal.strMeal.length > 20
                         ? `${meal.strMeal.slice(0, 20)}...`
                         : meal.strMeal}
                     </h3>

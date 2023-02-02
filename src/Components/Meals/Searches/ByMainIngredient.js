@@ -69,7 +69,9 @@ const ByMainIngredient = () => {
               );
             })
           ) : (
-            <h1 className="search_found">No Recipes Found. Please try another ingredient...</h1>
+            <h1 className="search_found">
+              No Recipes Found. Please try another ingredient...
+            </h1>
           )}
         </div>
       </div>

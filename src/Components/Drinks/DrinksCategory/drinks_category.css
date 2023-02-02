@@ -2,6 +2,74 @@
   width: 200px;
 }
 
-/* .drink_cat_name {
-  color: black;
-} */
+.coffee_tea_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/coffee_tea.jpg");
+  background-position: center center;
+}
+
+.shot_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/shot.jpg");
+  background-position: center center;
+}
+
+.ordinary_drink_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/ordinary.jpg");
+  background-position: center right;
+}
+
+.other_unknown_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/other.jpg");
+  background-position: center center;
+}
+
+.cocktail_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/cocktail.jpg");
+  background-position: center right;
+}
+
+.shake_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/shake.jpg");
+  background-position: center center;
+}
+
+.punch_party_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/punch.jpg");
+  background-position: center center;
+}
+
+.homemade_liqueur_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/homemade.jpg");
+  background-position: center right;
+}
+
+.cocoa_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/cocoa.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.beer_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/beer.jpg");
+  background-position: center center;
+}
+
+.soft_drink_cat {
+  background: linear-gradient(rgba(51, 50, 50, 0.7), rgba(5, 5, 5, 0.7)),
+    url("../../../assets/drinks/soft_drink.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.drinks_image {
+  height: 250px;
+}
