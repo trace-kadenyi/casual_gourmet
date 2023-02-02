@@ -56,25 +56,25 @@ const DrinksFunCorner = () => {
   };
 
   return (
-    <div className="fun_corner_sect">
+    <section className="fun_corner_sect">
       <DrinksNavigation type="category" />
-      <h3 className="fun_intro">
-        Have a little fun making your drinks in this corner{" "}
-      </h3>
-      <p className="fun_intro_para">
-        So, you're an amateur mixologist and you want to try your hand at making
-        some drinks...
-        <br />
-        There's no reason why you can't have some fun in the process. <br />
-        On this page, you can search for various drinks based on the main
-        ingredient, name, glass or type. <br />
-        You can even take it further and choose what drink to make based on the
-        first letter. <br />
-        So...
-        <br /> Get your ingredients and let's get mixing.
-      </p>
-
       <div className="fun_corner_div">
+        <h3 className="fun_intro">
+          Have a little fun making your drinks in this corner{" "}
+        </h3>
+        <p className="fun_intro_para">
+          So, you're an amateur mixologist and you want to try your hand at
+          making some drinks...
+          <br />
+          There's no reason why you can't have some fun in the process. <br />
+          On this page, you can search for various drinks based on the main
+          ingredient, name, glass or type. <br />
+          You can even take it further and choose what drink to make based on
+          the first letter. <br />
+          So...
+          <br /> Get your ingredients and let's get mixing.
+        </p>
+
         <div className="all_queries">
           {/* search buttons/input fields */}
           <div className="drinks_search_bys">
@@ -153,7 +153,7 @@ const DrinksFunCorner = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
