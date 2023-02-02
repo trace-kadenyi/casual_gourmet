@@ -143,7 +143,7 @@ You can deploy the project to Netlify by following these steps:
 
 <!-- AUTHORS -->
 
-## Author
+## Authors <a name="authors"></a>
 
 👤 **Tracey Kadenyi**
 
