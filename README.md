@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Doctor's Appointment</b></h3>
+  <h3><b>Casual Gourmet</b></h3>
 
 </div>
 
