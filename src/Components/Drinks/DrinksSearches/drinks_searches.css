@@ -15,3 +15,11 @@
   background: #c73866;
   border: 2px solid black;
 }
+
+.alcohol_input {
+  width: 90vw;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: #c73866 1px solid;
+}

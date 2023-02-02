@@ -35,7 +35,7 @@ const ByAlcohol = () => {
     } else {
       swal(
         "Oops!",
-        "Please enter either 'Alcoholic' or 'Non Alcoholic' in the search box.",
+        "Please enter either 'alcoholic' or 'non alcoholic' (lowercase) in the search box.",
         "error"
       );
     }
@@ -53,7 +53,7 @@ const ByAlcohol = () => {
         <h1 className="search_heading">Search By Type</h1>
         <div className="input_go">
           <input
-            className="search_input"
+            className="alcohol_input"
             type="text"
             placeholder="Enter alcohol"
             autoFocus
