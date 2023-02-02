@@ -16,7 +16,7 @@ const Category = () => {
 
   const { category } = useParams();
 
-  const foundCategory = categories.find((cat) => cat.strCategory === category);
+  // const foundCategory = categories.find((cat) => cat.strCategory === category);
 
   let categoryContainer;
 
@@ -51,7 +51,7 @@ const Category = () => {
   return (
     <div
       className={`individual_category ${assignClass(
-        foundCategory.strCategory
+        category
       )}`}
     >
       <Navbar type="category" />
@@ -59,7 +59,7 @@ const Category = () => {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <h1 className="title_head">{foundCategory.strCategory} Recipes</h1>
+          <h1 className="title_head">{category} Recipes</h1>
           <div>
             <div className="one_cat">
               {fetchedCategory.status === 200 ? (
