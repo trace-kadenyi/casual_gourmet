@@ -55,9 +55,9 @@ const ByAlcohol = () => {
           <input
             className="alcohol_input"
             type="text"
-            placeholder="Enter alcohol"
+            placeholder="Enter alcoholic or non alcoholic"
             autoFocus
-            value={alcohol.replace("-", " ")}
+            value={alcohol.replace("-", " ").toLocaleLowerCase()}
             onChange={(e) => setAlcohol(e.target.value)}
           />
 
