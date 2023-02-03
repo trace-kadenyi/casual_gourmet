@@ -164,6 +164,13 @@ const FunCorner = () => {
           </div>
         </div>
       </div>
+
+      {/* footer */}
+      <div className="footer">
+        <p>
+          &copy; <span className="footer_name">2023 Kadenyi</span>{" "}
+        </p>
+      </div>
     </section>
   );
 };
