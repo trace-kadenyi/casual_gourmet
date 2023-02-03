@@ -192,6 +192,17 @@
   align-items: center;
 }
 
+.footer {
+  text-align: center;
+  width: 50vw;
+  margin: 50px auto 0;
+  border-top: 1px #000 solid;
+}
+
+.footer_name {
+  font-size: 0.8rem;
+}
+
 @media screen and (max-width: 768px) {
   .all_queries {
     flex-direction: column;
