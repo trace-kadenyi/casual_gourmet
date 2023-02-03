@@ -77,7 +77,11 @@ const ByAlcohol = () => {
                     alt={item.strDrink}
                     onClick={() => handleIndividualDrinks(item.idDrink)}
                   />
-                  <h3 className="meal_title">{item.strDrink}</h3>
+                  <h4 id={item.idDrink} className="meal_title">
+                    {item.strDrink.length > 20
+                      ? `${item.strDrink.slice(0, 20)}...`
+                      : item.strDrink}
+                  </h4>
                 </div>
               );
             })
