@@ -107,7 +107,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```bash
-$ git clone https://github.com/TracK92/casual_gourmet.git
+$ git clone https://github.com/trace-kadenyi/casual_gourmet
 ```
 
 
@@ -146,7 +146,7 @@ You can deploy the project to Vercel by following these steps:
 
 👤 **Tracey Kadenyi**
 
-- GitHub: [@TracK92](https://github.com/TracK92)
+- GitHub: [@trace-kadenyi](https://github.com/trace-kadenyi)
 - LinkedIn: [@Tracey Kadenyi](https://www.linkedin.com/in/Tracey-Kadenyi/)
 - Twitter: [@traci_K7](https://twitter.com/traci_k7)
 
